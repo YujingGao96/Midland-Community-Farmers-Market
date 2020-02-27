@@ -20,7 +20,7 @@ a {
 }
 
 .bg-primary {
-    background-color: #f54339 !important;
+    background-color: #fff153 !important;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link.active {
@@ -33,16 +33,16 @@ a {
 
 .btn-primary {
     color: #fff;
-    background-color: #f54339;
-    border-color: #f54339;
+    background-color: #fff153;
+    border-color: #ffff74;
 }
 
 hr.divider {
-    border-color: #f54339 !important;
+    border-color: #ffff74 !important;
 }
 
 .text-primary {
-    color: #f54339 !important;
+    color: #00650A !important;
 }
 
 hr.light {
@@ -50,7 +50,7 @@ hr.light {
 }
 
 #mainNav .navbar-nav .nav-item .nav-link:hover, #mainNav .navbar-nav .nav-item .nav-link:active {
-    color: #f54339 !important;
+    color: #fff153 !important;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link.active {
