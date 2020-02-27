@@ -7,7 +7,7 @@ a {
 }
 
 .about-us-links, .about-us-links:hover {
-    color: white;
+    color: black;
     font-style: italic;
 }
 
@@ -90,5 +90,14 @@ hr.light {
     }
 }
 
+header.masthead {
+
+    background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../img/website opener.bmp");
+
+}
+
+.text-success{
+    color: #00650A !important;
+}
 
 
