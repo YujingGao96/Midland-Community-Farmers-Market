@@ -5,17 +5,24 @@
             <div class="col-lg-12 text-center">
                 <h1 class="text-success mt-0">Who Are We?</h1>
                 <hr class="divider light my-4">
-                <p class="text-dark mb-4">
-                    <%- aboutUsBodyStarting %>
-                    <% for (var i = 0; i < charitiesAndLink.length - 1;  i++ ) { %>
-                        <a class="about-us-links"
-                           href="<%= charitiesAndLink[i].charityLink %>"> <%= charitiesAndLink[i].charityName %></a><%= charitiesAndLink[i].additionText %>,
-                    <% } %>
-                    <!-- Print out the last charity-->
-                    and <a class="about-us-links"
-                           href="<%= charitiesAndLink[charitiesAndLink.length - 1].charityLink %>"> <%= charitiesAndLink[charitiesAndLink.length - 1].charityName %></a><%= charitiesAndLink[i].additionText %><%= aboutUsBodyEnding %>
-                </p>
-                <a class="btn btn-light btn-xl js-scroll-trigger" href="#bring-your-stuff">Get Started!</a>
+                <div class="row">
+                    <div class="col-6">
+                        <p class="text-dark mb-4 text-left" style="text-align: justify !important;">
+                            <%- aboutUsBodyStarting %>
+                            <% for (var i = 0; i < charitiesAndLink.length - 1;  i++ ) { %>
+                                <a class="about-us-links"
+                                   href="<%= charitiesAndLink[i].charityLink %>"> <%= charitiesAndLink[i].charityName %></a><%= charitiesAndLink[i].additionText %>,
+                            <% } %>
+                            <!-- Print out the last charity-->
+                            and <a class="about-us-links"
+                                   href="<%= charitiesAndLink[charitiesAndLink.length - 1].charityLink %>"> <%= charitiesAndLink[charitiesAndLink.length - 1].charityName %></a><%= charitiesAndLink[i].additionText %><%= aboutUsBodyEnding %>
+                        </p>
+                    </div>
+                    <div class="col-6">
+                        <img src="/img/who are we 1.jpg" width="100%" style="border-radius: 10px;">
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
