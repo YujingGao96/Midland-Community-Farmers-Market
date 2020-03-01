@@ -105,3 +105,10 @@ header.masthead {
 .text-success{
     color: #00650A !important;
 }
+
+#questions{
+    background: url("../img/event Spring Fling washed.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
