@@ -6,7 +6,7 @@
                 <h1 class="text-success mt-0">Who Are We?</h1>
                 <hr class="divider light my-4">
                 <div class="row align-content-center">
-                    <div class="col-6 align-middle">
+                    <div class="col-md-6 d-inline-block m-auto">
                         <p class="text-dark text-left my-auto align-middle" style="text-align: justify !important;">
                             <%- aboutUsBodyStarting %>
                             <% for (var i = 0; i < charitiesAndLink.length - 1;  i++ ) { %>
@@ -18,7 +18,7 @@
                                    href="<%= charitiesAndLink[charitiesAndLink.length - 1].charityLink %>"> <%= charitiesAndLink[charitiesAndLink.length - 1].charityName %></a><%= charitiesAndLink[i].additionText %><%= aboutUsBodyEnding %>
                         </p>
                     </div>
-                    <div class="col-6">
+                    <div class="col-md-6">
                         <img src="/img/who are we 1.jpg" width="100%" style="border-radius: 10px;">
                     </div>
                 </div>
