@@ -27,9 +27,6 @@ a {
     color: #f54339 !important;
 }
 
-#mainNav .navbar-nav .nav-item .nav-link.active {
-    color: #f54339 !important;
-}
 
 .btn-primary {
     color: #fff;
@@ -55,11 +52,11 @@ hr.light {
 }
 
 #mainNav .navbar-nav .nav-item .nav-link:hover, #mainNav .navbar-nav .nav-item .nav-link:active {
-    color: #fff153 !important;
+    color: #00650A !important;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link.active {
-    color: #f54339 !important;
+    color: #00650A !important;
 }
 
 @media only screen and (max-width: 600px) {
@@ -88,10 +85,13 @@ hr.light {
 
 @media (min-width: 992px) {
     #mainNav .navbar-nav .nav-item .nav-link {
-        color: white;
+        color: #00650A;
     }
     #mainNav .navbar-brand {
-        color: white;
+        color: #00650A;
+    }
+    #mainNav .navbar-brand:hover {
+        color: #00650A;
     }
 }
 
@@ -103,5 +103,3 @@ header.masthead {
 .text-success{
     color: #00650A !important;
 }
-
-
