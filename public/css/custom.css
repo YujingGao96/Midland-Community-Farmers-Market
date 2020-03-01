@@ -66,8 +66,10 @@ hr.light {
 }
 
 #special-event {
-    background: rgb(255, 81, 47);
-    background: linear-gradient(90deg, rgba(255, 81, 47, 1) 0%, rgba(221, 36, 118, 1) 100%);
+    background: url("../img/event Spring Fling washed.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
