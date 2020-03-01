@@ -41,8 +41,13 @@ hr.divider {
     border-color: #ffff74 !important;
 }
 
-.text-primary {
+.text-primary{
     color: #00650A !important;
+}
+
+.btn-success {
+    color: #ffff74;
+    background-color: #00650A;
 }
 
 hr.light {
@@ -91,10 +96,9 @@ hr.light {
 }
 
 header.masthead {
-
-    background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../img/website opener.bmp");
-
+    background: #fff153 ;
 }
+
 
 .text-success{
     color: #00650A !important;
