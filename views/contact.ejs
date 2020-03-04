@@ -11,8 +11,25 @@
         <div class="row">
             <div class="col-lg-6 ml-auto col-sm-12">
                 <div class="embed-responsive embed-responsive-4by3">
-                    <iframe id="googleMapFrame" class="embed-responsive-item"
-                            src="https://maps.google.com/maps?q=midland%20community%20&t=k&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+                    <!--WORK IN PROGRESS -->
+                    <div class="embed-responsive-item" id="googleMapFrame">
+                        <script>
+                            function initMap() {
+                            var myLatlng = new google.maps.LatLng{32.577408, -84.829156};
+                            var map = {
+                                zoom: 8,
+                                center: myLatlng,
+                                mapTypeId: 'roadmap'
+                                });
+                            }
+
+                        //var map = new google.maps.Map(document.getElementById('googleMapFrame'), mapOptions);
+                        </script>
+
+                        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqhHvsJFjHd1g1MK7SYeEE9YqbTUvzTnQ&callback=initMap"></script>
+                    </div>
+                    <!--<iframe id="googleMapFrame" class="embed-responsive-item"
+                            src="https://maps.google.com/maps?q=midland%20community%20&t=k&z=15&ie=UTF8&iwloc=&output=embed"></iframe>-->
                 </div>
             </div>
             <div class="col-lg-6 mr-auto col-sm-12">
