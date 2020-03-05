@@ -11,36 +11,19 @@
         <div class="row">
             <div class="col-lg-6 ml-auto col-sm-12">
                 <div class="embed-responsive embed-responsive-4by3">
-                    <!--WORK IN PROGRESS -->
-                    <div class="embed-responsive-item" id="googleMapFrame">
-                        <script>
-                            function initMap() {
-                            var myLatlng = new google.maps.LatLng{32.577408, -84.829156};
-                            var map = {
-                                zoom: 8,
-                                center: myLatlng,
-                                mapTypeId: 'roadmap'
-                                });
-                            }
-
-                        //var map = new google.maps.Map(document.getElementById('googleMapFrame'), mapOptions);
-                        </script>
-
-                        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqhHvsJFjHd1g1MK7SYeEE9YqbTUvzTnQ&callback=initMap"></script>
-                    </div>
-                    <!--<iframe id="googleMapFrame" class="embed-responsive-item"
-                            src="https://maps.google.com/maps?q=midland%20community%20&t=k&z=15&ie=UTF8&iwloc=&output=embed"></iframe>-->
+                    <iframe id="googleMapFrame" class="embed-responsive-item"
+                            src="https://maps.google.com/maps?q=midland%20farmers%20&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
                 </div>
             </div>
             <div class="col-lg-6 mr-auto col-sm-12">
-                <h4 class="mt-4 ml-2"><%= contact.contactAddress%></h4>
-                <h5 class="text-muted ml-2"><%= contact.contactAddressSub%></h5>
+                <h4 class="mt-4 ml-2"><%= contact.contactAddress %></h4>
+                <h5 class="text-muted ml-2"><%= contact.contactAddressSub %></h5>
                 <p class="text-muted ml-2">
                     <br>
                     <b>From Columbus:</b><br>
-                    <%= contact.contactFromColumbus%><br><br>
+                    <%= contact.contactFromColumbus %><br><br>
                     <b>From Warm Springs or Waverly Hall:</b><br>
-                    <%= contact.contactFromWarmSprings%>
+                    <%= contact.contactFromWarmSprings %>
                 </p>
 
             </div>
@@ -51,17 +34,17 @@
             </div>
             <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
                 <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
-                <div><%= contact.contactPhone%></div>
+                <div><%= contact.contactPhone %></div>
             </div>
             <a class="col-lg-4 ml-auto text-center mb-5 mb-lg-0"
                href="https://www.facebook.com/Midland-Community-Farmers-Market-584202175008593/">
                 <i class="fab fa-facebook-square fa-3x mb-3 text-muted"></i>
                 <div>Follow us on Facebook</div>
             </a>
-            <a class="col-lg-4 mr-auto text-center" href="mailto:<%= contact.contactEmail%>">
+            <a class="col-lg-4 mr-auto text-center" href="mailto:<%= contact.contactEmail %>">
                 <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
                 <!-- Make sure to change the email address in anchor text AND the link below! -->
-                <div class="d-block"><%= contact.contactEmail%></div>
+                <div class="d-block"><%= contact.contactEmail %></div>
             </a>
 
         </div>
