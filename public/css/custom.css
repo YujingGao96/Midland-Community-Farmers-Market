@@ -112,3 +112,10 @@ header.masthead {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.home-logo{
+    background: url("../img/amber logo b.bmp");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
