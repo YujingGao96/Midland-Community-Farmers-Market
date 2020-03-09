@@ -25,32 +25,28 @@
                     </div>
                     <div class="col-lg-6 my-auto px-4 pt-4">
                         <form method="post" action="/">
+                            <div class="form-group">
+                                <label for="inputName" class="text-white">Your name</label>
+                                <input type="text" class="form-control" id="inputName" name="name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inputSell" class="text-white">Items being sold - NO FRANCHISE SALES</label>
+                                <input type="text" class="form-control" id="inputSell" name="selling" maxlength="20"
+                                       required>
+                            </div>
                             <div class="form-row">
-                                <div class="form-group col-6">
-                                    <label for="inputFirstName" class="text-white">First Name</label>
-                                    <input type="text" class="form-control" id="inputFirstName" name="firstName" required>
+                                <div class="form-group col-5">
+                                    <label for="inputPhone" class="text-white">Phone number</label>
+                                    <input type="tel" class="form-control" id="inputPhone" name="phone" maxlength="14" required>
                                 </div>
-                                <div class="form-group col-6">
-                                    <label for="inputLastName" class="text-white">Last Name</label>
-                                    <input type="text" class="form-control" id="inputLastName" name="lastName" required>
+                                <div class="form-group col-7">
+                                    <label for="inputEmail" class="text-white">Email address</label>
+                                    <input type="email" class="form-control" id="inputEmail" name="email" required>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="inputEmail" class="text-white">Email</label>
-                                <input type="email" class="form-control" id="inputEmail" name="email" required>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-4">
-                                    <label for="inputPhone" class="text-white">Phone</label>
-                                <input type="tel" class="form-control" id="inputPhone" name="phone" required placeholder="123-456-789033ee  r g                      XM       mnznmhjs lslckw,vkwkeijpyt2fgG                            ```fccccc " pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
-                                </div>
-                                <div class="form-group col-8">
-                                    <label for="inputSell" class="text-white">Selling Items</label>
-                                    <input type="text" class="form-control" id="inputSell" name="selling" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputSpot" class="text-white">Choose A Spot</label>
+                                <label for="inputSpot" class="text-white">Choose a spot</label>
                                 <select id="inputSpot" class="form-control" name="spot">
                                     <option selected>Spot #2</option>
                                     <option>Spot #3</option>
@@ -66,7 +62,8 @@
 
                             <p class="my-3 col-12" id="agreement-message"><i class="far fa-check-circle"></i>&nbsp;&nbsp;You've
                                 agreed our term of services</p>
-                            <button type="submit" class="btn btn-primary btn-xl mt-3" id="pay-button" disabled>Pay With PayPal
+                            <button type="submit" class="btn btn-primary btn-xl mt-3" id="pay-button" disabled>Pay With
+                                PayPal
                             </button>
                             <!-- Modal -->
                             <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog"
@@ -81,65 +78,8 @@
                                             </button>
                                         </div>
                                         <div class="modal-body">
-                                            <h4 class="text-dark">What does it cost?</h4>
                                             <p class="text-dark">
-                                                The weekly fee is as little as $10 (the minimum donation) with no
-                                                contracts,
-                                                no big investment, and no long-term commitments. You only pay
-                                                on the weeks you decide to come sell. There is no charge for Boy Scouts
-                                                or
-                                                Girl Scouts, children 13 and under, members of Midland United Methodist
-                                                Church, charitable groups,
-                                                or anyone whose sales are a fund-raiser for a charitable purpose.
-                                                Your fees go to support deserving local charities selected by the
-                                                membership
-                                                of the Men's Club of Midland United Methodist Church.
-                                            </p>
-                                            <h4 class="text-dark">What can I sell at the market?</h4>
-                                            <p class="text-dark">All kinds of things, as long as it's something YOU or
-                                                your family have made.
-                                                We especially like to see locally-grown produce, but our vendors also
-                                                have
-                                                also had good results selling fresh eggs, homemade cheese and other
-                                                dairy
-                                                items, pickles and relishes, jams and jellies, local honey, yard and
-                                                garden
-                                                plants, cut flowers, fresh bread and other baked goods, birdhouses,
-                                                picnic
-                                                tables, walking sticks and canes, toys and other folk art, quilts,
-                                                crocheting, and other fabric crafts, soaps, candles, and much more.</p>
-
-                                            <h4 class="text-dark">What isn't allowed?</h4>
-
-                                            <p class="text-dark">Don't worry, we don't restrict what you sell on a
-                                                "somebody's already
-                                                selling that" basis. Nothing inappropriate, of course, but remember,
-                                                this is
-                                                a showcase for your homemade items. So...​
-
-                                                No resale: items you just bought elsewhere
-
-                                                No franchise sales: (Scentsi, Paparazzi, LuLarue, Avon, etc.)
-
-                                                No "yard sale" or flea market type items
-
-
-                                                But if you're not sure, just give us a call.</p>
-
-                                            <h4 class="text-dark">What do I need to do?</h4>
-                                            <p class="text-dark">If possible, call or email before your first time (see
-                                                the "Info and
-                                                Directions" page) so we can get your contact information and answer any
-                                                questions you might have. Aside from that, you just show up about 8:30
-                                                on
-                                                the Saturdays when you want to sell, set up your table or tent, and get
-                                                ready to greet your customers!
-
-                                                You're going to like the relaxed, casual atmosphere of the Midland
-                                                Community
-                                                Farmers Market. Selling here is a great way to spend a Saturday morning
-                                                while supporting your community, making a little money, and meeting some
-                                                wonderful new friends!
+                                                <%- reservation.termOfServices %>
                                             </p>
                                         </div>
                                         <div class="modal-footer">

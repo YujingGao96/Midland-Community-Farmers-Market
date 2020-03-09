@@ -2,7 +2,7 @@
   "navLogoText": "Midland Community<br>Farmers Market",
   "homeHeader": "Midland Community Farmers Market",
   "homeDate": "Every Saturday (May through October) from 9:00 am until noon.",
-  "homeButtonText":   "Find Out More Info",
+  "homeButtonText": "Find Out More Info",
   "vendorButtonText": "Make A Reservation",
   "aboutUsTitle": "Who Are We?",
   "aboutUsBodyStarting": "The Midland Community Farmers Market</b> is operated as a non-profit function of the Mens' Club of <a class=\"about-us-links\" href=\"http://www.midlandumc.com/\">Midland United Methodist Church</a>, and is offered as a service to the people of the Midland area of Georgia's Muscogee and Harris Counties. All vendor fees go to support the club's local outreach ministries, including ",
@@ -58,7 +58,7 @@
     "specialEventSwitch": "ON",
     "specialEventTitle": "Spring Fling"
   },
-"springFling": {
+  "springFling": {
     "title": "",
     "infoSection1": "As always, the weekly market season will open on the first Saturday in May. But for those who just can't wait, in March we'll repeat last year's very popular pre-season event: the second annual",
     "bold1": "Spring Fling Craft Market!",
@@ -68,9 +68,9 @@
     "comment": "(*As always, charitable groups and kids under 13 are free.)",
     "whenIsIt": "Mark your calendars for Saturday, March 14th, from 11:00 - 3:00.",
     "closing": "See you there!"
-      },
-
-
-
+  },
+  "reservation": {
+    "termOfServices": "IN RESERVING A SPACE, I AGREE TO HOLD MIDLAND UNITED METHODIST CHURCH AND THE MIDLAND COMMUNITY FARMERS MARKET HARMLESS FROM ALL CLAIMS OR SUITS FOR ALL LOSSES, LIABILITIES, INJURIES, OR OTHER DETRIMENTS WHICH MAY BE MADE AGAINST MIDLAND UNITED METHODIST CHURCH OR THE MIDLAND COMMUNITY FARMERS MARKET BASED ON ANY INTENTIONAL OR NEGLIGENT ACT OR OMISSION BY THE VENDOR OR A CUSTOMER AS A RESULT OF PARTICIPATION IN THE MIDLAND COMMUNITY FARMERS MARKETS."
+  },
   "footerText": "Copyright &copy; 2020 - Midland Community Farmers Market"
 }
