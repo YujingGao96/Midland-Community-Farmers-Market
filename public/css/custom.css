@@ -2,8 +2,12 @@ a {
     color: #f54940;
 }
 
-#googleMapFrame, .map-rounded {
+#googleMapFrame, .map-rounded{
     border-radius: 8px;
+}
+
+.rounded-corner {
+    border-radius: 15px;
 }
 
 .about-us-links, .about-us-links:hover {
