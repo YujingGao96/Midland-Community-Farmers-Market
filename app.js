@@ -4,7 +4,7 @@ const helmet = require('helmet'); // for security consideration
 
 const express = require('express');
 let app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
 
 app.use(helmet());
 app.set('views', path.join(__dirname, "views"));
