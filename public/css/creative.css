@@ -5938,7 +5938,6 @@ a.close.disabled {
   position: relative;
   width: 100%;
   overflow: hidden;
-  height: 850px;
 }
 
 .carousel-inner::after {
@@ -7368,6 +7367,7 @@ button.bg-dark:focus {
 
 .w-100 {
   width: 100% !important;
+  height: 850px;
 }
 
 .w-auto {
