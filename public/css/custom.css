@@ -115,6 +115,7 @@ header.masthead {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    display: flex;
 }
 
 .titleText {
@@ -122,5 +123,6 @@ header.masthead {
     text-align: center;
     font-size: 2rem;
     vertical-align: middle;
+
     
 }
