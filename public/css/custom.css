@@ -128,6 +128,6 @@ header.masthead {
 
     
 }
-.set-Height {
-    height: 350px;
+.set-height {
+    height: 350px !important; 
 }
