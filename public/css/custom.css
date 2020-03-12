@@ -114,23 +114,14 @@ header.masthead {
 }
 
 .home-logo{
-    background: url("../img/home-logo-textless.png");
+    background: url("../img/amber logo b.bmp");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    display: flex;
-    justify-content: center;
+   
 }
 
-.titleText {
-    color: #fff;
-    text-align: center;
-    font-size: 2rem;
-    vertical-align: middle;
-    align-self: center;
 
-    
-}
 .set-height {
     height: 350px !important; 
 }
