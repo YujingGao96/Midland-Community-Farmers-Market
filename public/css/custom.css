@@ -67,6 +67,9 @@ hr.light {
     #gallery {
         display: none;
     }
+    .home-logo{
+        display: none !important;
+    }
 }
 
 #special-event {
