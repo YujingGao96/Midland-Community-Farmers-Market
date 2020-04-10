@@ -2,7 +2,7 @@ const http = require('http');
 const path = require('path');
 const helmet = require('helmet'); // for security consideration
 const paypal = require('paypal-rest-sdk');
-
+const mysql = require('mysql');
 const express = require('express');
 let app = express();
 const port = process.env.PORT || 8080;
@@ -14,11 +14,7 @@ app.use(express.static('public')); //Express serves images, CSS files, and JavaS
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
-//testing
-var mysql = require('mysql');
-var connection = mysql.createConnection(process.env.JAWSDB_URL);
-
-connection.connect();
+connectToDB();
 
 //setting paypal information
 paypal.configure({
@@ -29,12 +25,7 @@ paypal.configure({
 
 // Root GET URL takes the configuration file and render the index.ejs file
 app.get('/', function (req, res) {
-    connection.query('SELECT 1 + 1 AS solution', function(err, rows, fields) {
-        if (err) throw err;
-        res.send('The solution is: ', rows[0].solution);
-    });
-    connection.end();
-    //res.render('index', parseJson());
+    res.render('index', parseJson());
 });
 
 app.post("/", function (req, res) {
@@ -130,6 +121,20 @@ function parseJson() {
     const fs = require("fs");
     const contents = fs.readFileSync("configurations.json");
     return JSON.parse(contents);
+}
+
+function connectToDB() {
+    let connection = mysql.createConnection(process.env.JAWSDB_URL);
+
+    connection.connect();
+
+    connection.query('SELECT 1 + 1 AS solution', function(err, rows, fields) {
+        if (err) throw err;
+
+        console.log('The solution is: ', rows[0].solution);
+    });
+
+    connection.end();
 }
 
 http.createServer(app).listen(port, function () {
