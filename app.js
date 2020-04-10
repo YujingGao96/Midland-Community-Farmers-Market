@@ -20,14 +20,6 @@ var connection = mysql.createConnection(process.env.JAWSDB_URL);
 
 connection.connect();
 
-connection.query('SELECT 1 + 1 AS solution', function(err, rows, fields) {
-    if (err) throw err;
-
-    console.log('The solution is: ', rows[0].solution);
-});
-
-connection.end();
-
 //setting paypal information
 paypal.configure({
     'mode': 'sandbox', //sandbox or live
@@ -37,7 +29,12 @@ paypal.configure({
 
 // Root GET URL takes the configuration file and render the index.ejs file
 app.get('/', function (req, res) {
-    res.render('index', parseJson());
+    connection.query('SELECT 1 + 1 AS solution', function(err, rows, fields) {
+        if (err) throw err;
+        res.send('The solution is: ', rows[0].solution);
+    });
+    connection.end();
+    //res.render('index', parseJson());
 });
 
 app.post("/", function (req, res) {
