@@ -20,6 +20,8 @@
   "dependencies": {
     "ejs": "^3.0.1",
     "express": "^4.17.1",
-    "helmet": "^3.21.2"
+    "helmet": "^3.21.2",
+    "mysql": "^2.18.1",
+    "paypal-rest-sdk": "^1.8.1"
   }
 }
