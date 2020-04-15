@@ -29,6 +29,7 @@ app.get('/', function (req, res) {
 });
 
 app.post("/", function (req, res) {
+    console.log("request body: " + JSON.stringify(req.body));
     var fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
     let create_payment_json;
     create_payment_json = {
