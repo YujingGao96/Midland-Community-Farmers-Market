@@ -14,9 +14,9 @@ app.use(express.static('public')); //Express serves images, CSS files, and JavaS
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
-connectToDB();
+queryDB('SELECT * FROM TBL_ITEMS', 'SELECT * FROM TBL_EVENT');
 
-//setting paypal information
+//setting PayPal information
 paypal.configure({
     'mode': 'sandbox', //sandbox or live
     'client_id': 'AYscelyFVeqO7lxrqpBaVv-7y9nZPWyN98a-wv-8bUObZAlipfk7QCwmV54JsJDxo26Bxsh4FirUzTof',
@@ -123,17 +123,15 @@ function parseJson() {
     return JSON.parse(contents);
 }
 
-function connectToDB() {
+function queryDB(...queryCommands) {
     let connection = mysql.createConnection(process.env.JAWSDB_URL);
-
     connection.connect();
-
-    connection.query('SELECT 1 + 1 AS solution', function(err, rows, fields) {
-        if (err) throw err;
-
-        console.log('The solution is: ', rows[0].solution);
-    });
-
+    for (let queryCommand of queryCommands) {
+        connection.query(queryCommand, function (err, rows, fields) {
+            if (err) throw err;
+            console.log('The solution is: ', rows);
+        });
+    }
     connection.end();
 }
 
