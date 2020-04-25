@@ -8,7 +8,58 @@
 <section class="page-section" id="contact">
     <div class="container text-center">
         <h1 class="my-5">Welcome to the dashboard, administrator!</h1>
-        <h3>Under Construction</h3>
+        <div class="card row shadow rounded bg-white">
+            <div class="card-body">
+                <h3>Upcoming Events</h3>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Event Date</th>
+                        <th scope="col">Event Type</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <% for (var i = 0; i < comingEvent.length;  i++ ) { %>
+                        <tr>
+                            <td><%= comingEvent[i].EVENT_DT %></td>
+                            <td><%= comingEvent[i].EVENT_TYPE %></td>
+                        </tr>
+                    <% } %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <hr class="m-5">
+
+        <div class="card row shadow rounded bg-white">
+            <div class="card-body">
+                <h3>Add a New Event</h3>
+                <form action="/add-a-new-event" method="post">
+                    <div class="form-group row">
+                        <label for="date-input" class="col-2 col-form-label">Date: </label>
+                        <div class="col-10">
+                            <input class="form-control" type="date" value="2020-04-25" id="date-input" name="dateInput">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inlineFormCustomSelect" class="col-2 col-form-label">Event Type: </label>
+                        <select class="custom-select col-10" id="inlineFormCustomSelect" name="eventType">
+                            <option selected value="WM">Weekly Market</option>
+                            <option value="SF">Spring Fling</option>
+                            <option value="FF">Fall Festival</option>
+                            <option value="CC">Christmas Craft Fair</option>
+                        </select>
+                    </div>
+                    <div class="form-group row align-content-center d-inline">
+                        <button class="btn-dark col-7" type="submit">Add this event to the database</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <hr class="m-5">
+
     </div>
 </section>
 

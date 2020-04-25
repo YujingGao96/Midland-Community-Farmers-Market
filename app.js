@@ -152,7 +152,13 @@ app.get('/admin', (req, res) => {
 app.post('/admin', (req, res) => {
     const password = req.body.password;
     if (password === 'P@ssw0rd') {
-        res.render('dashboard', parseJson());
+
+        queryDB((row) => {
+            let newJSON = parseJson();
+            newJSON.comingEvent = row;
+            res.render('dashboard', newJSON);
+        }, "SELECT EVENT_DT, EVENT_TYPE FROM TBL_EVENT WHERE EVENT_DT > NOW();");
+
     } else {
         let newJSON = parseJson();
         newJSON.correctPassword = false;
@@ -166,20 +172,23 @@ function parseJson() {
     return JSON.parse(contents);
 }
 
-function queryDB(...queryCommands) {
+function queryDB(_callback, ...queryCommands) {
     let connection = mysql.createConnection(process.env.JAWSDB_URL);
     connection.connect();
     for (let queryCommand of queryCommands) {
         connection.query(queryCommand, function (err, rows, fields) {
-            if (err) throw err;
-            console.log('Successful Query! Result: ', rows);
-            return rows;
+            if (err) {
+                throw err
+            } else {
+                console.log('Successful Query! Result: ', rows);
+                _callback(rows);
+            }
         });
     }
     connection.end();
 }
 
-function getCurrentDate(){
+function getCurrentDate() {
     let today = new Date();
     let dd = String(today.getDate()).padStart(2, '0');
     let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
