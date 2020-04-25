@@ -14,8 +14,6 @@ app.use(express.static('public')); //Express serves images, CSS files, and JavaS
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
-queryDB('SELECT * FROM TBL_ITEMS', 'SELECT * FROM TBL_EVENT');
-
 //setting PayPal information
 paypal.configure({
     'mode': 'sandbox', //sandbox or live
@@ -30,6 +28,15 @@ app.get('/', function (req, res) {
 
 app.post("/", function (req, res) {
     console.log("request body: " + JSON.stringify(req.body));
+    firstName = req.body.firstName;
+    lastName = req.body.lastName;
+    phoneNumber = req.body.phone;
+    emailAddress = req.body.email;
+    spaceID = req.body.spot;
+    eventDate = req.body.eventDate;
+    itemIntentToSell = req.body.selling;
+    registrationDate = getCurrentDate();
+
     var fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
     let create_payment_json;
     create_payment_json = {
@@ -74,6 +81,35 @@ app.post("/", function (req, res) {
 
 });
 
+let firstName;
+let lastName;
+let phoneNumber;
+let emailAddress;
+let itemIntentToSell;
+let eventDate;
+let registrationDate;
+let amount;
+let confirmationNumber;
+let paymentMethod;
+let spaceID;
+
+function queryToDatabase() {
+    let queryCommand = "CALL ADD_TO_EVENT('";
+    queryCommand += firstName + "', '";
+    queryCommand += lastName + "', '";
+    queryCommand += phoneNumber + "', '";
+    queryCommand += emailAddress + "', '";
+    queryCommand += itemIntentToSell + "', '";
+    queryCommand += eventDate + "', '";
+    queryCommand += registrationDate + "', '";
+    queryCommand += amount + "', '";
+    queryCommand += confirmationNumber + "', '";
+    queryCommand += paymentMethod + "', '";
+    queryCommand += spaceID + "'); ";
+
+    queryDB(queryCommand);
+}
+
 app.get('/success', function (req, res) {
     const payerID = req.query.PayerID;
     const paymentID = req.query.paymentId;
@@ -92,6 +128,12 @@ app.get('/success', function (req, res) {
             console.log(err.response);
             throw err;
         } else {
+            amount = payment.transactions[0].amount.total;
+            confirmationNumber = payment.id;
+            paymentMethod = payment.payer.payment_method;
+
+            //SUCCESSFUL PAYMENT, QUERY TO DATABASE
+            queryToDatabase();
             console.log("Get Payment Response");
             console.log(JSON.stringify(payment));
             res.render('payment-success', parseJson());
@@ -130,10 +172,21 @@ function queryDB(...queryCommands) {
     for (let queryCommand of queryCommands) {
         connection.query(queryCommand, function (err, rows, fields) {
             if (err) throw err;
-            console.log('The solution is: ', rows);
+            console.log('Successful Query! Result: ', rows);
+            return rows;
         });
     }
     connection.end();
+}
+
+function getCurrentDate(){
+    let today = new Date();
+    let dd = String(today.getDate()).padStart(2, '0');
+    let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    let yyyy = today.getFullYear();
+
+    today = mm + '-' + dd + '-' + yyyy;
+    return today;
 }
 
 http.createServer(app).listen(port, function () {
