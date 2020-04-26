@@ -124,12 +124,14 @@
   },
   "weeklyMarket": {
     "weeklyMarketSwitch": "ON",
-    "weeklyMarketDate": "05-02-2020"
+    "weeklyMarketDate": "05-02-2020",
+    "weeklyMarketExplanation": "Reservation can be made beginning at 8:00 PM on the Monday before the market, until 8:00 PM on the Thursday before Saturday's market."
   },
   "specialEvent": {
     "specialEventSwitch": "ON",
     "specialEventTitle": "Fall Festival",
     "specialEventDate": "06-20-2020",
+    "specialEventExplanation": "Reservation can be made beginning six weeks before the event, until the Tuesday before the market.",
     "specialEventWriteUp": {
       "infoSection1": "As always, the weekly market season will open on the first Saturday in May. But for those who just can't wait, in March we'll repeat last year's very popular pre-season event: the second annual",
       "bold1": "Fall Festival Craft Market!",
