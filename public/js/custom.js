@@ -17,5 +17,8 @@ $('[type="tel"]').keyup((e) =>{
         let phoneSelector = $('#inputPhone');
         let num = phoneSelector.val().replace(/\D/g,'');
         phoneSelector.val('(' + num.substring(0,3) + ') ' + num.substring(3,6) + '-' + num.substring(6,10));
+        let phoneSelector2 = $('#inputPhone2');
+        let num2 = phoneSelector2.val().replace(/\D/g,'');
+        phoneSelector2.val('(' + num2.substring(0,3) + ') ' + num2.substring(3,6) + '-' + num2.substring(6,10));
     }
 });
