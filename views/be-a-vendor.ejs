@@ -3,26 +3,16 @@
     <div class="container">
         <div class="row">
             <div class="mb-4 col-12 text-center">
-                <h1><%= beAVendor.beAVendorTitle%></h1>
+                <h1><%= beAVendor.beAVendorTitle %></h1>
                 <hr class="divider my-4">
             </div>
 
             <div class="p-3 col-lg-6 col-md-12">
                 <div class="card h-100">
                     <div class="card-body">
-                        <h4 class="card-title">What does it cost?</h4>
-                        <p> The weekly fee is as little as $10 (the minimum donation) with no contracts, no big
-                            investment,
-                            and no long-term commitments. You only pay
-                            on the weeks you decide to come sell. There is no charge for Boy Scouts or Girl Scouts,
-                            children
-                            13 and under, members of Midland United Methodist Church,
-                            charitable groups, or anyone whose sales are a fund-raiser for a charitable purpose.
-                        </p>
-                        <p>Your fees go to support deserving local charities selected by the membership of the Men's
-                            Club of
-                            <a href="http://www.midlandumc.com/">Midland United Methodist Church</a>.
-                        </p>
+                        <h4 class="card-title"><%- beAVendor.item1.title %></h4>
+                        <p><%- beAVendor.item1.subtext.subtext1 %></p>
+                        <p><%- beAVendor.item1.subtext.subtext2 %></p>
                     </div>
                 </div>
             </div>
@@ -30,15 +20,9 @@
             <div class="p-3 col-lg-6 col-md-12">
                 <div class="card h-100">
                     <div class="card-body">
-                        <h4 class="card-title">What can I sell at the market?</h4>
-                        <p>All kinds of things, as long as it's something <b>YOU or your family have made</b>.</p>
-                        <p>We especially like to see locally-grown produce, but our vendors
-                            also have also had good results selling fresh eggs, homemade cheese and other dairy items,
-                            pickles and relishes, jams and jellies, local honey,
-                            yard and garden plants, cut flowers, fresh bread and other baked goods, birdhouses, picnic
-                            tables, walking sticks and canes, toys and other folk art,
-                            quilts, crocheting, and other fabric crafts, soaps, candles, and much more.
-                        </p>
+                        <h4 class="card-title"><%- beAVendor.item2.title %></h4>
+                        <p><%- beAVendor.item2.subtext.subtext1 %></p>
+                        <p><%- beAVendor.item2.subtext.subtext2 %></p>
                     </div>
                 </div>
             </div>
@@ -46,18 +30,15 @@
             <div class="p-3 col-lg-6 col-md-12">
                 <div class="card h-100">
                     <div class="card-body">
-                        <h4 class="card-title">What isn't allowed?</h4>
-                        <p> Don't worry, we don't restrict what you sell on a "somebody's already selling that" basis.
-                            Nothing inappropriate, of course, but remember, this is a showcase for your homemade items.
-                            So...​</p>
+                        <h4 class="card-title"><%- beAVendor.item3.title %></h4>
+                        <p><%- beAVendor.item3.subtext.subtext1 %>​</p>
                         <ul class="text-danger">
-                            <li>No resale: items you just bought elsewhere</li>
-                            <li> No franchise sales: (Scentsi, Paparazzi, LuLarue, Avon, Tupperware, and Color Street, etc.)</li>
-                            <li>No "yard sale" or flea market type items</li>
+                            <li><%- beAVendor.item3.subtext.subtext2.option1 %></li>
+                            <li><%- beAVendor.item3.subtext.subtext2.option2 %></li>
+                            <li><%- beAVendor.item3.subtext.subtext2.option3 %></li>
                         </ul>
                         <p>
-                            But if you're not sure, <a href="#contact" class="js-scroll-trigger">just send us an email</a>
-                            .
+                            <%- beAVendor.item3.subtext.subtext3 %>
                         </p>
                     </div>
                 </div>
@@ -66,24 +47,9 @@
             <div class="p-3 col-lg-6 col-md-12">
                 <div class="card h-100">
                     <div class="card-body">
-                        <h4 class="card-title">What do I need to do?</h4>
-                        <p> If possible, send an email before your first time (see the "<a href="#contact"
-                                                                                           class="js-scroll-trigger">Contact</a>
-                            " section) so we
-                            can
-                            get your contact information and answer any
-                            questions you might have. Aside from that, you just show up about 8:30 on the Saturdays when
-                            you
-                            want to sell, set up your table or tent, and
-                            get ready to greet your customers!
-                        </p>
-                        <p>
-                            You're going to like the relaxed, casual atmosphere of the Midland Community Farmers Market.
-                            Selling here is a great way to spend a Saturday
-                            morning while supporting your community, making a little money, and meeting some wonderful
-                            new
-                            friends!​
-                        </p>
+                        <h4 class="card-title"><%- beAVendor.item4.title %></h4>
+                        <p><%- beAVendor.item4.subtext.subtext1 %></p>
+                        <p><%- beAVendor.item4.subtext.subtext2 %></p>
                     </div>
                 </div>
             </div>

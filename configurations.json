@@ -59,10 +59,43 @@
     "item4SubText4": "Soaps and candles"
   },
   "beAVendor": {
-    "beAVendorTitle": "Be A Vendor"
+    "beAVendorTitle": "Be A Vendor",
+    "item1": {
+      "title": "What does it cost?",
+      "subtext": {
+        "subtext1": "The weekly fee is as little as $10 (the minimum donation) with no contracts, no big investment, and no long-term commitments. You only pay on the weeks you decide to come sell. There is no charge for Boy Scouts or Girl Scouts, children 13 and under, members of Midland United Methodist Church, charitable groups, or anyone whose sales are a fund-raiser for a charitable purpose.",
+        "subtext2": "Your fees go to support deserving local charities selected by the membership of the Men's Club of <a href=\"http://www.midlandumc.com/\">Midland United Methodist Church</a>."
+      }
+    },
+    "item2": {
+      "title": "What can I sell at the market?",
+      "subtext": {
+        "subtext1": "All kinds of things, as long as it's something <b>YOU or your family have made</b>.",
+        "subtext2": "We especially like to see locally-grown produce, but our vendors also have also had good results selling fresh eggs, homemade cheese and other dairy items, pickles and relishes, jams and jellies, local honey, yard and garden plants, cut flowers, fresh bread and other baked goods, birdhouses, picnic tables, walking sticks and canes, toys and other folk art, quilts, crocheting, and other fabric crafts, soaps, candles, and much more."
+      }
+    },
+    "item3": {
+      "title": "What isn't allowed?",
+      "subtext": {
+        "subtext1": "Don't worry, we don't restrict what you sell on a \"somebody's already selling that\" basis. Nothing inappropriate, of course, but remember, this is a showcase for your homemade items. So...",
+        "subtext2": {
+          "option1": "No resale: items you just bought elsewhere",
+          "option2": "No franchise sales: (Scentsi, Paparazzi, LuLarue, Avon, Tupperware, and Color Street, etc.)",
+          "option3": "No \"yard sale\" or flea market type items"
+        },
+        "subtext3": "But if you're not sure, <a href=\"#contact\" class=\"js-scroll-trigger\">just send us an email</a>."
+      }
+    },
+    "item4": {
+      "title": "What do I need to do?",
+      "subtext": {
+        "subtext1": "If possible, send an email before your first time (see the \"<a href=\"#contact\" class=\"js-scroll-trigger\">Contact</a>\" section) so we can get your contact information and answer any questions you might have. Aside from that, you just show up about 8:30 on the Saturdays when you want to sell, set up your table or tent, and get ready to greet your customers!",
+        "subtext2": "You're going to like the relaxed, casual atmosphere of the Midland Community Farmers Market. Selling here is a great way to spend a Saturday morning while supporting your community, making a little money, and meeting some wonderful new friends!"
+      }
+    }
   },
   "contact": {
-    "contactTitle" : "Maps & Info",
+    "contactTitle": "Maps & Info",
     "contactAddress": "9110 Warm Springs Road Midland, Georgia 31820",
     "contactAddressSub": "(the corner of Warm Springs and Garrett Roads)",
     "contactFromColumbus": "Head east on Manchester Expressway (north GA-85 / US-27 Alt.) Take the County Line Road exit, and turn left across the bridge. Go a quarter mile and turn right onto Garrett Road.",
