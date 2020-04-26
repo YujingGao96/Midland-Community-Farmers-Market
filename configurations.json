@@ -123,11 +123,11 @@
     "tripAdvisorText": "Find us on TripAdvisor"
   },
   "weeklyMarket": {
-    "weeklyMarketSwitch": "ON",
+    "weeklyMarketSwitch": "OFF",
     "weeklyMarketDate": "05-02-2020"
   },
   "specialEvent": {
-    "specialEventSwitch": "ON",
+    "specialEventSwitch": "OFF",
     "specialEventTitle": "Spring Fling",
     "specialEventDate": "04-25-2020",
     "specialEventWriteUp": {
