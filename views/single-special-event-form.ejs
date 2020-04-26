@@ -1,5 +1,5 @@
 <div class="row my-5 text-center d-inline">
-    <h5>Date: <%= specialEvent.specialEventDate%></h5>
+    <h4>Upcoming <%= specialEvent.specialEventTitle%> Date: <%= specialEvent.specialEventDate%></h4>
 </div>
 <div class="row my-5 text-center d-inline">
     <h6><%= specialEvent.specialEventExplanation%></h6>
@@ -18,7 +18,8 @@
     </div>
     <div class="col-12 my-auto px-4 pt-4">
         <form method="post" action="/">
-            <input type="hidden" id="eventType" name="eventDate" value=<%= specialEvent.specialEventDate%>>
+            <input type="hidden" id="eventType" name="eventType" value= "SE">
+            <input type="hidden" id="eventDate" name="eventDate" value=<%= specialEvent.specialEventDate%>>
             <div class="form-row">
                 <div class="form-group col-6">
                     <label for="inputFirstName" class="text-white">First name</label>
@@ -105,11 +106,12 @@
             <i class="fas fa-chevron-circle-down"></i>&nbsp;&nbsp;Show parking/space information
         </button>
         <div class="collapse my-3" id="collapseExample2">
-            <div class="card card-body text-dark">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-                richardson ad
-                squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
-                sapiente ea proident.
+            <div class="card card-body text-dark text-left">
+                <h6 class="my-2"><%= specialEvent.specialEventWriteUp.paragraph1 %></h6>
+                <h6 class="my-2"><%= specialEvent.specialEventWriteUp.paragraph2 %></h6>
+                <h6 class="my-2"><%= specialEvent.specialEventWriteUp.paragraph3 %></h6>
+                <h6 class="my-2"><b><%= specialEvent.specialEventWriteUp.paragraph4 %></b></h6>
+                <h6 class="my-2"><%= specialEvent.specialEventWriteUp.paragraph5 %></h6>
             </div>
         </div>
     </div>

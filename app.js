@@ -49,10 +49,17 @@ app.post("/", function (req, res) {
     spaceID = req.body.spot;
     eventDate = req.body.eventDate;
     itemIntentToSell = req.body.selling;
+    eventType = req.body.eventType;
     registrationDate = getCurrentDate();
 
     var fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
     let create_payment_json;
+    let fee;
+    if (eventType === 'WM'){
+        fee = parseJson().weeklyMarket.weeklyMarketFee;
+    }else{
+        fee = parseJson().specialEvent.specialEventFee;
+    }
     create_payment_json = {
         "intent": "sale",
         "payer": {
@@ -67,14 +74,14 @@ app.post("/", function (req, res) {
                 "items": [{
                     "name": "weekly market",  //Here goes the event name
                     "sku": "event id", //Here goes the event ID
-                    "price": "10.00", //Here goes the price
+                    "price": fee, //Here goes the price
                     "currency": "USD", //Usually not to be changed
                     "quantity": 1
                 }]
             },
             "amount": {
                 "currency": "USD",
-                "total": "10.00"
+                "total": fee
             },
             "description": "This is the payment description."
         }]
@@ -106,6 +113,8 @@ let amount;
 let confirmationNumber;
 let paymentMethod;
 let spaceID;
+
+let eventType;
 
 function queryToDatabase(req,res) {
     let queryCommand = "CALL ADD_TO_EVENT('";

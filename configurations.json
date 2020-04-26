@@ -124,15 +124,29 @@
   },
   "weeklyMarket": {
     "weeklyMarketSwitch": "ON",
+    "weeklyMarketFee": "10.00",
     "weeklyMarketDate": "05-02-2020",
-    "weeklyMarketExplanation": "Reservation can be made beginning at 8:00 PM on the Monday before the market, until 8:00 PM on the Thursday before Saturday's market."
+    "weeklyMarketExplanation": "Reservation can be made beginning at 8:00 PM on the Monday before the market, until 8:00 PM on the Thursday before Saturday's market.",
+    "weeklyMarketWriteUp": {
+      "paragraph1": "Our main market filed has 74 spaces. The Market Manager can be found in Space #1. Spaces 2-33 may be reserved for the following Saturday's market. Spaces 23-34 have LIMITED electrical capacity. Simply make your selection from the list of available spaces, and you can pay via credit card or PayPal. These reservations will be held until 8:30 on Saturday morning. After that time, your space may not be available, but your donation may be credited for the use of any other space. Space fee donations are NON-REFUNDABLE. Your $10 fee is a donation to the MUMC Men's Club, which distributes the collected fees to deserving local charities.",
+      "paragraph2": "Spaces which were not reserved, and all other spaces, also cost $10 (although we'll happily accept larger donations.) Just show up, pick out a spot, and set up. Payment for these spaces (CASH ONLY) maybe be made on the morning of the market; see the market manager in Space #1.",
+      "paragraph3": "Spaces 64 and 71-74 are for overflow use only, after all other spaces are filled. Spaces 67T - 70T are half-size spaces which accommodate tables only, no canopies. See below for parking information."
+    }
   },
   "specialEvent": {
     "specialEventSwitch": "ON",
+    "specialEventFee": "25.00",
     "specialEventTitle": "Fall Festival",
     "specialEventDate": "06-20-2020",
     "specialEventExplanation": "Reservation can be made beginning six weeks before the event, until the Tuesday before the market.",
     "specialEventWriteUp": {
+      "paragraph1": "Our main market filed has 74 spaces. Space 23-34 have LIMITED electrical capacity. There are an additional 11 spaces by the fountain across the street, and 17 more in the front of the Fellowship Hall. The Market Manager can be found in Space #1. For special market events, ALL SPACES ARE BY RESERVATION ONLY, and may be reserved beginning six weeks before the event, with reservations closing on the Thursday prior to the event. Simply make your selection from the list of available spaces, and you can pay via credit card or PayPal.",
+      "paragraph2": "When making your selection, please note that spaces 67T - 70T on the main filed and spaces FH 14T - FH 17T in front of the Fellowship Hall are TABLE ONLY spaces, which can accommodate TABLES ONLY, and do NOT have room for a canopy.",
+      "paragraph3": "Please see below for parking information.",
+      "paragraph4": "DO NOT DRIVE STAKES at the Fountain or Fellowship Hall spaces. Vendors who violate this rule will be expected to reimburse the church for any resulting damages to the sprinkler system.",
+      "paragraph5": "Spaces fee donations are NON-REFUNDABLE. Your fee is a donation to the MUMC Men's Club, which distributes the collected fees to deserving local charities."
+    },
+    "specialEventBanner": {
       "infoSection1": "As always, the weekly market season will open on the first Saturday in May. But for those who just can't wait, in March we'll repeat last year's very popular pre-season event: the second annual",
       "bold1": "Fall Festival Craft Market!",
       "infoSection2": "It might still be a little early then for some of the veggies, but all your favorite vendors from the",
