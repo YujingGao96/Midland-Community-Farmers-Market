@@ -35,39 +35,61 @@
   ],
   "aboutUsBodyEnding": ". Come on out and have a good time while supporting your community. SEE YOU THERE!",
   "aboutUsButtonText": "Get Started!",
-  "bringYourStuff": {
-    "bringYourStuffTitle": "What's Available",
-    "item1Title": "Locally-grown Items",
-    "item1SubText": "Organic Vegetables, Farm-fresh Eggs, and Goat Dairy Items.",
-    "item2Title": "Bakery and Foods",
-    "item2SubText": "Homemade Pickles, Jams and Jellies, Local Honey, and Delicious Baked Goods.",
-    "item3Title": "Handmade Items",
-    "item3SubText": "Fine Handicrafts, Handmade Candles and Soaps",
-    "item4Title": "Yard and Garden Plants",
-    "item4SubText": "Flowers, Bonsai, and So Much More..."
+  "whatsAvailable": {
+    "whatsAvailableTitle": "What's Available",
+    "item1Title": "FRUITS & VEGETABLES",
+    "item1SubText1": "Locally grown produce",
+    "item1SubText2": "Organic vegetables",
+    "item1SubText3": "Local Honey",
+    "item1SubText4": "Fresh eggs and dairy items",
+    "item2Title": "YARD & GARDEN",
+    "item2SubText1": "Potted plants",
+    "item2SubText2": "Tomato and other garden plants",
+    "item2SubText3": "Fresh cut flowers",
+    "item2SubText4": "Live poultry and other animals",
+    "item3Title": "FOOD",
+    "item3SubText1": "Homemade pickles",
+    "item3SubText2": "Jams and jellies",
+    "item3SubText3": "Delicious backed goods",
+    "item3SubText4": "Prepared hot foods",
+    "item4Title": "ARTS & CRAFTS",
+    "item4SubText1": "Original paintings",
+    "item4SubText2": "Woodcraft and pottery",
+    "item4SubText3": "Quilts and crocheting",
+    "item4SubText4": "Soaps and candles"
+  },
+  "beAVendor": {
+    "beAVendorTitle": "Be A Vendor"
   },
   "contact": {
+    "contactTitle" : "Maps & Info",
     "contactAddress": "9110 Warm Springs Road Midland, Georgia 31820",
     "contactAddressSub": "(the corner of Warm Springs and Garrett Roads)",
     "contactFromColumbus": "Head east on Manchester Expressway (north GA-85 / US-27 Alt.) Take the County Line Road exit, and turn left across the bridge. Go a quarter mile and turn right onto Garrett Road.",
     "contactFromWarmSprings": "Head south on GA-85. Go four miles past Ellerslie, turn right at the County Line Road exit, and right again at Garrett Road.",
     "contactEmail": "MidlandCFM@gmail.com",
-    "contactPhone": "+1 (706) 507-0357"
+    "contactPhone": "+1 (706) 507-0357",
+    "facebookText": "Find us on Facebook",
+    "tripAdvisorText": "Find us on TripAdvisor"
+  },
+  "weeklyMarket": {
+    "weeklyMarketSwitch": "ON",
+    "weeklyMarketDate": "05-02-2020"
   },
   "specialEvent": {
     "specialEventSwitch": "ON",
-    "specialEventTitle": "Spring Fling"
-  },
-  "springFling": {
-    "title": "",
-    "infoSection1": "As always, the weekly market season will open on the first Saturday in May. But for those who just can't wait, in March we'll repeat last year's very popular pre-season event: the second annual",
-    "bold1": "Spring Fling Craft Market!",
-    "infoSection2": "It might still be a little early then for some of the veggies, but all your favorite vendors from the",
-    "bold2": "Midland Community Farmers Market",
-    "infoSection3": "will be on hand, with arts and crafts, fine woodworking, fabric items, baked goods, pickles, jams, jellies, and much, much more! No reservation required. Vendor fees* will be $15, which will go to local charities.",
-    "comment": "(*As always, charitable groups and kids under 13 are free.)",
-    "whenIsIt": "Mark your calendars for Saturday, March 14th, from 11:00 - 3:00.",
-    "closing": "See you there!"
+    "specialEventTitle": "Spring Fling",
+    "specialEventDate": "04-25-2020",
+    "specialEventWriteUp": {
+      "infoSection1": "As always, the weekly market season will open on the first Saturday in May. But for those who just can't wait, in March we'll repeat last year's very popular pre-season event: the second annual",
+      "bold1": "Spring Fling Craft Market!",
+      "infoSection2": "It might still be a little early then for some of the veggies, but all your favorite vendors from the",
+      "bold2": "Midland Community Farmers Market",
+      "infoSection3": "will be on hand, with arts and crafts, fine woodworking, fabric items, baked goods, pickles, jams, jellies, and much, much more! No reservation required. Vendor fees* will be $15, which will go to local charities.",
+      "comment": "(*As always, charitable groups and kids under 13 are free.)",
+      "whenIsIt": "Mark your calendars for Saturday, March 14th, from 11:00 - 3:00.",
+      "closing": "See you there!"
+    }
   },
   "reservation": {
     "termOfServices": "IN RESERVING A SPACE, I AGREE TO HOLD MIDLAND UNITED METHODIST CHURCH AND THE MIDLAND COMMUNITY FARMERS MARKET HARMLESS FROM ALL CLAIMS OR SUITS FOR ALL LOSSES, LIABILITIES, INJURIES, OR OTHER DETRIMENTS WHICH MAY BE MADE AGAINST MIDLAND UNITED METHODIST CHURCH OR THE MIDLAND COMMUNITY FARMERS MARKET BASED ON ANY INTENTIONAL OR NEGLIGENT ACT OR OMISSION BY THE VENDOR OR A CUSTOMER AS A RESULT OF PARTICIPATION IN THE MIDLAND COMMUNITY FARMERS MARKETS."

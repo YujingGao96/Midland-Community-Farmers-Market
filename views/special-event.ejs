@@ -3,20 +3,15 @@
         <h1 class="text-center mt-0 text-success"><%= specialEvent.specialEventTitle %></h1>
         <hr class="divider my-4 light">
         <h5 class="text-success text-center m-4">
-            As always, the weekly market season will open on the first Saturday in May. But for those who just can't
-            wait, in March we'll repeat last year's very popular pre-season event: the second annual
+            <%= specialEvent.specialEventWriteUp.infoSection1 %>
         </h5>
-        <h3 class="text-success text-center m-4">Spring Fling Craft Market!</h3>
-        <h5 class="text-success text-center m-4">It might still be a little early then for some of the veggies, but all
-            your favorite vendors from the </h5>
-        <h3 class="text-success text-center m-4">Midland Community Farmers Market</h3>
-        <h5 class="text-success text-center m-4">will be on hand, with arts and crafts, fine woodworking, fabric items,
-            baked goods, pickles, jams, jellies,
-            and much, much more! No reservation
-            required. Vendor fees* will be $15, which will go to local charities.</h5>
-        <h6 class="text-success text-center m-4">(*As always, charitable groups and kids under 13 are free.) </h6>
-        <h5 class="text-success text-center m-4">Mark your calendars for Saturday, March 14th, from 11:00 - 3:00. </h5>
-        <h5 class="text-success text-center m-4">See you there!</h5>
+        <h3 class="text-success text-center m-4"><%= specialEvent.specialEventWriteUp.bold1 %></h3>
+        <h5 class="text-success text-center m-4"><%= specialEvent.specialEventWriteUp.infoSection2 %></h5>
+        <h3 class="text-success text-center m-4"><%= specialEvent.specialEventWriteUp.bold2 %></h3>
+        <h5 class="text-success text-center m-4"><%= specialEvent.specialEventWriteUp.infoSection3 %></h5>
+        <h6 class="text-success text-center m-4"><%= specialEvent.specialEventWriteUp.comment %></h6>
+        <h5 class="text-success text-center m-4"><%= specialEvent.specialEventWriteUp.whenIsIt %></h5>
+        <h5 class="text-success text-center m-4"><%= specialEvent.specialEventWriteUp.closing %></h5>
 
     </div>
 </section>
