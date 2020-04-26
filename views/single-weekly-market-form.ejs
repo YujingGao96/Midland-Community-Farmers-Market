@@ -42,38 +42,9 @@
             <div class="form-group">
                 <label for="inputSpot" class="text-white">Choose a space</label>
                 <select id="inputSpot" class="form-control" name="spot">
-                    <option selected>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                    <option>7</option>
-                    <option>8</option>
-                    <option>9</option>
-                    <option>Space #10</option>
-                    <option>Space #11</option>
-                    <option>Space #12</option>
-                    <option>Space #13</option>
-                    <option>Space #14</option>
-                    <option>Space #15</option>
-                    <option>Space #16</option>
-                    <option>Space #17</option>
-                    <option>Space #18</option>
-                    <option>Space #19</option>
-                    <option>Space #20</option>
-                    <option>Space #21</option>
-                    <option>Space #22</option>
-                    <option>Space #23</option>
-                    <option>Space #24</option>
-                    <option>Space #25</option>
-                    <option>Space #26</option>
-                    <option>Space #27</option>
-                    <option>Space #28</option>
-                    <option>Space #29</option>
-                    <option>Space #30</option>
-                    <option>Space #31</option>
-                    <option>Space #32</option>
-                    <option>Space #33</option>
+                    <% for (var i = 0 ; i < weeklyMarket.spaces[0].length; i++) {%>
+                        <option> <%= weeklyMarket.spaces[0][i].SPACE_ID %></option>
+                    <%}%>
                 </select>
             </div>
             <button type="button" class="btn btn-secondary btn-xl mt-3 col-8" data-toggle="modal"

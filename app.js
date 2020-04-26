@@ -24,17 +24,20 @@ paypal.configure({
 // Root GET URL takes the configuration file and render the index.ejs file
 app.get('/', function (req, res) {
     let newJSON = parseJson();
-    const queryCommand = "CALL GET_SPACES_FOR_DATE" +
-        "('" + dateInput  + "');";
+    const weeklyMarketDate = newJSON.weeklyMarket.weeklyMarketDate;
+    const specialEventDate = newJSON.specialEvent.specialEventDate;
+    newJSON.weeklyMarket.spaces = [[]];
+    newJSON.specialEvent.spaces = [[]];
     queryDB((row) => {
-        let newJSON = parseJson();
-        newJSON.customerInfo = row;
+        newJSON.weeklyMarket.spaces = row;
         queryDB((row) => {
-            newJSON.comingEvent = row;
-            res.render('dashboard', newJSON);
-        }, "SELECT EVENT_DT, EVENT_TYPE FROM TBL_EVENT WHERE EVENT_DT > NOW();");
-    }, queryCommand);
-    res.render('index', parseJson());
+            newJSON.specialEvent.spaces = row;
+            res.render('index', newJSON);
+        }, "CALL GET_SPACES_FOR_DATE" + "('" + specialEventDate  + "');");
+    }, "CALL GET_SPACES_FOR_DATE" + "('" + weeklyMarketDate  + "');");
+
+
+
 });
 
 app.post("/", function (req, res) {
