@@ -93,7 +93,7 @@ let confirmationNumber;
 let paymentMethod;
 let spaceID;
 
-function queryToDatabase() {
+function queryToDatabase(req,res) {
     let queryCommand = "CALL ADD_TO_EVENT('";
     queryCommand += firstName + "', '";
     queryCommand += lastName + "', '";
@@ -107,7 +107,9 @@ function queryToDatabase() {
     queryCommand += paymentMethod + "', '";
     queryCommand += spaceID + "'); ";
 
-    queryDB(queryCommand);
+    queryDB(() => {
+        res.render('payment-success', parseJson());
+    }, queryCommand);
 }
 
 app.get('/success', function (req, res) {
@@ -131,12 +133,8 @@ app.get('/success', function (req, res) {
             amount = payment.transactions[0].amount.total;
             confirmationNumber = payment.id;
             paymentMethod = payment.payer.payment_method;
-
             //SUCCESSFUL PAYMENT, QUERY TO DATABASE
-            queryToDatabase();
-            console.log("Get Payment Response");
-            console.log(JSON.stringify(payment));
-            res.render('payment-success', parseJson());
+            queryToDatabase(req,res);
         }
     });
 });
@@ -152,19 +150,53 @@ app.get('/admin', (req, res) => {
 app.post('/admin', (req, res) => {
     const password = req.body.password;
     if (password === 'P@ssw0rd') {
-
-        queryDB((row) => {
-            let newJSON = parseJson();
-            newJSON.comingEvent = row;
-            res.render('dashboard', newJSON);
-        }, "SELECT EVENT_DT, EVENT_TYPE FROM TBL_EVENT WHERE EVENT_DT > NOW();");
-
+        getAllEvents(req,res);
     } else {
         let newJSON = parseJson();
         newJSON.correctPassword = false;
         res.render('admin', newJSON);
     }
 });
+
+app.post('/add-a-new-event', (req,res) => {
+    const dateInput = formatDate(req.body.dateInput);
+    const eventType = req.body.eventType;
+    const queryCommand = "CALL ADD_EVENT_DATE" +
+        "('" + dateInput + "', '" + eventType + "');";
+    queryDB(() => {
+        getAllEvents(req,res);
+    }, queryCommand);
+});
+
+app.post('/view-all-customer', (req,res) => {
+    const dateInput = formatDate(req.body.dateInput2);
+    const queryCommand = "CALL VIEW_ALL_CUSTOMER_FOR_DATE" +
+        "('" + dateInput  + "');";
+    queryDB((row) => {
+        let newJSON = parseJson();
+        newJSON.customerInfo = row;
+        queryDB((row) => {
+            newJSON.comingEvent = row;
+            res.render('dashboard', newJSON);
+        }, "SELECT EVENT_DT, EVENT_TYPE FROM TBL_EVENT WHERE EVENT_DT > NOW();");
+    }, queryCommand);
+
+});
+
+function getAllEvents(req, res) {
+    queryDB((row) => {
+        let newJSON = parseJson();
+        newJSON.comingEvent = row;
+        newJSON.customerInfo = [];
+        res.render('dashboard', newJSON);
+    }, "SELECT EVENT_DT, EVENT_TYPE FROM TBL_EVENT WHERE EVENT_DT > NOW();");
+}
+
+function formatDate(dateInput) {
+    let tempString;
+    tempString = dateInput.substring(5,10) + '-' + dateInput.substring(0,4);
+    return tempString;
+}
 
 function parseJson() {
     const fs = require("fs");
