@@ -23,6 +23,17 @@ paypal.configure({
 
 // Root GET URL takes the configuration file and render the index.ejs file
 app.get('/', function (req, res) {
+    let newJSON = parseJson();
+    const queryCommand = "CALL GET_SPACES_FOR_DATE" +
+        "('" + dateInput  + "');";
+    queryDB((row) => {
+        let newJSON = parseJson();
+        newJSON.customerInfo = row;
+        queryDB((row) => {
+            newJSON.comingEvent = row;
+            res.render('dashboard', newJSON);
+        }, "SELECT EVENT_DT, EVENT_TYPE FROM TBL_EVENT WHERE EVENT_DT > NOW();");
+    }, queryCommand);
     res.render('index', parseJson());
 });
 
@@ -187,7 +198,7 @@ function getAllEvents(req, res) {
     queryDB((row) => {
         let newJSON = parseJson();
         newJSON.comingEvent = row;
-        newJSON.customerInfo = [];
+        newJSON.customerInfo = [[]];
         res.render('dashboard', newJSON);
     }, "SELECT EVENT_DT, EVENT_TYPE FROM TBL_EVENT WHERE EVENT_DT > NOW();");
 }

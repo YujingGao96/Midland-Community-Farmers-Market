@@ -1,3 +1,6 @@
+<div class="row my-5 text-center d-inline">
+    <h5>Date: <%= weeklyMarket.weeklyMarketDate%></h5>
+</div>
 <div class="row">
     <div class="col-lg-6">
         <img class="img-fluid map-rounded" src="img/market-spaces/Spaces - Main Field.jpg"
@@ -5,7 +8,7 @@
     </div>
     <div class="col-lg-6 my-auto px-4 pt-4">
         <form method="post" action="/">
-            <input type="hidden" id="eventType" name="eventDate" value="04-25-2020">
+            <input type="hidden" id="eventType" name="eventDate" value=<%= weeklyMarket.weeklyMarketDate%>>
             <div class="form-row">
                 <div class="form-group col-6">
                     <label for="inputFirstName" class="text-white">First name</label>
