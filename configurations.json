@@ -2,61 +2,78 @@
   "navLogoText": "Midland Community<br>Farmers Market",
   "homeHeader": "Midland Community Farmers Market",
   "homeDate": "Every Saturday (May through October) from 9:00 am until noon.",
-  "homeButtonText": "Find Out More Info",
-  "vendorButtonText": "Make A Reservation",
-  "aboutUsTitle": "Who Are We?",
-  "aboutUsBodyStarting": "The Midland Community Farmers Market</b> is operated as a non-profit function of the Mens' Club of <a class=\"about-us-links\" href=\"http://www.midlandumc.com/\">Midland United Methodist Church</a>, and is offered as a service to the people of the Midland area of Georgia's Muscogee and Harris Counties. All vendor fees go to support the club's local outreach ministries, including ",
-  "charitiesAndLink": [
-    {
-      "charityName": "House of Heroes",
-      "charityLink": "https://houseofheroescvc.org/",
-      "additionText": ""
-    },
-    {
-      "charityName": "Camp Dream",
-      "charityLink": "http://campdreamga.org/",
-      "additionText": ""
-    },
-    {
-      "charityName": "Ronald McDonald House",
-      "charityLink": "http://www.rmhcwga.org/",
-      "additionText": " of Columbus"
-    },
-    {
-      "charityName": "Valley Rescue",
-      "charityLink": "https://www.valleyrescuemission.org/",
-      "additionText": ""
-    },
-    {
-      "charityName": "Carpenter's Way",
-      "charityLink": "https://www.themethodisthome.org/residential-care/carpenters-way-ranch-columbus/",
-      "additionText": ""
+  "about": {
+    "title": "Who Are We?",
+    "body": {
+      "starting": "The Midland Community Farmers Market</b> is operated as a non-profit function of the Mens' Club of <a class=\"about-us-links\" href=\"http://www.midlandumc.com/\">Midland United Methodist Church</a>, and is offered as a service to the people of the Midland area of Georgia's Muscogee and Harris Counties. All vendor fees go to support the club's local outreach ministries, including ",
+      "charitiesAndLink": [
+        {
+          "charityName": "House of Heroes",
+          "charityLink": "https://houseofheroescvc.org/",
+          "additionText": ""
+        },
+        {
+          "charityName": "Camp Dream",
+          "charityLink": "http://campdreamga.org/",
+          "additionText": ""
+        },
+        {
+          "charityName": "Ronald McDonald House",
+          "charityLink": "http://www.rmhcwga.org/",
+          "additionText": " of Columbus"
+        },
+        {
+          "charityName": "Valley Rescue",
+          "charityLink": "https://www.valleyrescuemission.org/",
+          "additionText": ""
+        },
+        {
+          "charityName": "Carpenter's Way",
+          "charityLink": "https://www.themethodisthome.org/residential-care/carpenters-way-ranch-columbus/",
+          "additionText": ""
+        }
+      ],
+      "ending": ". Come on out and have a good time while supporting your community. SEE YOU THERE!"
     }
-  ],
-  "aboutUsBodyEnding": ". Come on out and have a good time while supporting your community. SEE YOU THERE!",
-  "aboutUsButtonText": "Get Started!",
+  },
   "whatsAvailable": {
     "whatsAvailableTitle": "What's Available",
-    "item1Title": "FRUITS & VEGETABLES",
-    "item1SubText1": "Locally grown produce",
-    "item1SubText2": "Organic vegetables",
-    "item1SubText3": "Local Honey",
-    "item1SubText4": "Fresh eggs and dairy items",
-    "item2Title": "YARD & GARDEN",
-    "item2SubText1": "Potted plants",
-    "item2SubText2": "Tomato and other garden plants",
-    "item2SubText3": "Fresh cut flowers",
-    "item2SubText4": "Live poultry and other animals",
-    "item3Title": "FOOD",
-    "item3SubText1": "Homemade pickles",
-    "item3SubText2": "Jams and jellies",
-    "item3SubText3": "Delicious backed goods",
-    "item3SubText4": "Prepared hot foods",
-    "item4Title": "ARTS & CRAFTS",
-    "item4SubText1": "Original paintings",
-    "item4SubText2": "Woodcraft and pottery",
-    "item4SubText3": "Quilts and crocheting",
-    "item4SubText4": "Soaps and candles"
+    "item1": {
+      "title": "FRUITS & VEGETABLES",
+      "subtext": {
+        "subText1": "Locally grown produce",
+        "subText2": "Organic vegetables",
+        "subText3": "Local Honey",
+        "subText4": "Fresh eggs and dairy items"
+      }
+    },
+    "item2": {
+      "title": "YARD & GARDEN",
+      "subtext": {
+        "subText1": "Potted plants",
+        "subText2": "Tomato and other garden plants",
+        "subText3": "Fresh cut flowers",
+        "subText4": "Live poultry and other animals"
+      }
+    },
+    "item3": {
+      "title": "FOOD",
+      "subtext": {
+        "subText1": "Homemade pickles",
+        "subText2": "Jams and jellies",
+        "subText3": "Delicious backed goods",
+        "subText4": "Prepared hot foods"
+      }
+    },
+    "item4": {
+      "title": "ARTS & CRAFTS",
+      "subtext": {
+        "subText1": "Original paintings",
+        "subText2": "Woodcraft and pottery",
+        "subText3": "Quilts and crocheting",
+        "subText4": "Soaps and candles"
+      }
+    }
   },
   "beAVendor": {
     "beAVendorTitle": "Be A Vendor",
@@ -110,7 +127,7 @@
     "weeklyMarketDate": "05-02-2020"
   },
   "specialEvent": {
-    "specialEventSwitch": "ON",
+    "specialEventSwitch": "OFF",
     "specialEventTitle": "Spring Fling",
     "specialEventDate": "04-25-2020",
     "specialEventWriteUp": {
