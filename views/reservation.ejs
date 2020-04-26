@@ -4,6 +4,10 @@
         <h1 class="mb-4">Reservation</h1>
         <hr class="divider my-4">
 
+        <% if (specialEvent.specialEventSwitch !== 'ON' && weeklyMarket.weeklyMarketSwitch !== 'ON') { %>
+            <%- include('no-registration', {}); %>
+        <% }%>
+
         <div class="row my-5">
             <div class="col-6 text-center">
                 <a class="btn btn-light btn-xl reservation-btn" data-toggle="collapse" href="#multiCollapseExample1"
