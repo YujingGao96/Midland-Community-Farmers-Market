@@ -21,6 +21,7 @@ paypal.configure({
     'client_secret': 'EL9UFVbvXyKFowaUPrO7ZPVYbBXk7NBC3XFZvsgZIXQ_B5taISxH4bj2KLDd5Loy5f6xsSmQyqHD7KAx'
 });
 
+
 // Root GET URL takes the configuration file and render the index.ejs file
 app.get('/', function (req, res) {
     let newJSON = parseJson();
@@ -54,11 +55,13 @@ app.post("/", function (req, res) {
 
     var fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
     let create_payment_json;
-    let fee;
+    let fee, name;
     if (eventType === 'WM'){
         fee = parseJson().weeklyMarket.weeklyMarketFee;
+        name = 'Weekly Market Registration Fee';
     }else{
         fee = parseJson().specialEvent.specialEventFee;
+        name = 'Special Event Registration Fee';
     }
     create_payment_json = {
         "intent": "sale",
@@ -72,10 +75,10 @@ app.post("/", function (req, res) {
         "transactions": [{
             "item_list": {
                 "items": [{
-                    "name": "weekly market",  //Here goes the event name
-                    "sku": "event id", //Here goes the event ID
+                    "name": name,  //Here goes the event name
+                    "sku": "Event Date: " + eventDate, //Here goes the event ID (Date)
                     "price": fee, //Here goes the price
-                    "currency": "USD", //Usually not to be changed
+                    "currency": "USD",
                     "quantity": 1
                 }]
             },
@@ -102,39 +105,6 @@ app.post("/", function (req, res) {
 
 });
 
-let firstName;
-let lastName;
-let phoneNumber;
-let emailAddress;
-let itemIntentToSell;
-let eventDate;
-let registrationDate;
-let amount;
-let confirmationNumber;
-let paymentMethod;
-let spaceID;
-
-let eventType;
-
-function queryToDatabase(req,res) {
-    let queryCommand = "CALL ADD_TO_EVENT('";
-    queryCommand += firstName + "', '";
-    queryCommand += lastName + "', '";
-    queryCommand += phoneNumber + "', '";
-    queryCommand += emailAddress + "', '";
-    queryCommand += itemIntentToSell + "', '";
-    queryCommand += eventDate + "', '";
-    queryCommand += registrationDate + "', '";
-    queryCommand += amount + "', '";
-    queryCommand += confirmationNumber + "', '";
-    queryCommand += paymentMethod + "', '";
-    queryCommand += spaceID + "'); ";
-
-    queryDB(() => {
-        res.render('payment-success', parseJson());
-    }, queryCommand);
-}
-
 app.get('/success', function (req, res) {
     const payerID = req.query.PayerID;
     const paymentID = req.query.paymentId;
@@ -157,7 +127,7 @@ app.get('/success', function (req, res) {
             confirmationNumber = payment.id;
             paymentMethod = payment.payer.payment_method;
             //SUCCESSFUL PAYMENT, QUERY TO DATABASE
-            queryToDatabase(req,res);
+            addNewEventDetailRow(req,res);
         }
     });
 });
@@ -206,27 +176,77 @@ app.post('/view-all-customer', (req,res) => {
 
 });
 
+let firstName;
+let lastName;
+let phoneNumber;
+let emailAddress;
+let itemIntentToSell;
+let eventDate;
+let registrationDate;
+let amount;
+let confirmationNumber;
+let paymentMethod;
+let spaceID;
+
+let eventType;
+
+// The function will be triggered after the payment is succeed.
+// This function will gather all vendor information and then insert into TBL_EVENT_DTL table
+// ADD_TO_EVENT is a SQL stored procedure.
+function addNewEventDetailRow(req,res) {
+    let queryCommand = "CALL ADD_TO_EVENT('";
+    queryCommand += firstName + "', '";
+    queryCommand += lastName + "', '";
+    queryCommand += phoneNumber + "', '";
+    queryCommand += emailAddress + "', '";
+    queryCommand += itemIntentToSell + "', '";
+    queryCommand += eventDate + "', '";
+    queryCommand += registrationDate + "', '";
+    queryCommand += amount + "', '";
+    queryCommand += confirmationNumber + "', '";
+    queryCommand += paymentMethod + "', '";
+    queryCommand += spaceID + "'); ";
+
+    queryDB(() => {
+        res.render('payment-success', parseJson());
+    }, queryCommand);
+}
+
+// This function will look for all upcoming events, and display them to the dashboard page (authenticated admin page).
+
 function getAllEvents(req, res) {
     queryDB((row) => {
+        // Gather all needed config parameters
         let newJSON = parseJson();
+        // Append the row (result from DB) into parsed JSON object
         newJSON.comingEvent = row;
+        // Parameter 'customerInfo' is needed to render the page, otherwise it will complain 'customerInfo' is not found.
+        // The first element of the customerInfo data is vendor data (an array) for a specific event, so I initialized it with [[]]
         newJSON.customerInfo = [[]];
         res.render('dashboard', newJSON);
     }, "SELECT EVENT_DT, EVENT_TYPE FROM TBL_EVENT WHERE EVENT_DT > NOW();");
 }
 
+// The function take Date string format like YYYY-MM-DD, and returns Date string format like MM-DD-YYYY
+// We do this not because we are stupid or bored, but because we can only use MM-DD-YYYY in our database queries.
 function formatDate(dateInput) {
     let tempString;
+    // string: YYYY-MM-DD
+    // index:  0123456789
     tempString = dateInput.substring(5,10) + '-' + dateInput.substring(0,4);
     return tempString;
 }
 
+// The function reads configurations.json file ,then parses it  to a JS object and returns it
 function parseJson() {
     const fs = require("fs");
     const contents = fs.readFileSync("configurations.json");
     return JSON.parse(contents);
 }
 
+// The function take a callback function, and any number of query commands to be executed.
+// The function make the connection to the JawDB MySQL and then try to query the commands.
+// If all good, the function is going to call the callback function and do whatever is specified in the callback function.
 function queryDB(_callback, ...queryCommands) {
     let connection = mysql.createConnection(process.env.JAWSDB_URL);
     connection.connect();
@@ -235,7 +255,6 @@ function queryDB(_callback, ...queryCommands) {
             if (err) {
                 throw err
             } else {
-                console.log('Successful Query! Result: ', rows);
                 _callback(rows);
             }
         });
@@ -243,10 +262,11 @@ function queryDB(_callback, ...queryCommands) {
     connection.end();
 }
 
+// The function get the current date in MM-DD-YYYY format
 function getCurrentDate() {
     let today = new Date();
     let dd = String(today.getDate()).padStart(2, '0');
-    let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    let mm = String(today.getMonth() + 1).padStart(2, '0'); //Months start from 0, so we add 1 to it!
     let yyyy = today.getFullYear();
 
     today = mm + '-' + dd + '-' + yyyy;
