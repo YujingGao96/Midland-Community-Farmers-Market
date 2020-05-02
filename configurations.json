@@ -113,7 +113,10 @@
   },
   "contact": {
     "contactTitle": "Maps & Info",
-    "contactAddress": "9110 Warm Springs Road Midland, Georgia 31820",
+    "contactAddress": {
+      "line1": "9110 Warm Springs Road",
+      "line2": "Midland, Georgia 31820"
+    },
     "contactAddressSub": "(the corner of Warm Springs and Garrett Roads)",
     "contactFromColumbus": "Head east on Manchester Expressway (north GA-85 / US-27 Alt.) Take the County Line Road exit, and turn left across the bridge. Go a quarter mile and turn right onto Garrett Road.",
     "contactFromWarmSprings": "Head south on GA-85. Go four miles past Ellerslie, turn right at the County Line Road exit, and right again at Garrett Road.",
