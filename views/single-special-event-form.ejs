@@ -1,6 +1,13 @@
 <div class="row my-5 text-center d-inline">
     <h4>Upcoming <%= specialEvent.specialEventTitle %> Date: <%= specialEvent.specialEventDate %></h4>
 </div>
+<div class="row my-5 text-left d-inline">
+    <h6 class="my-2"><%= specialEvent.specialEventWriteUp.paragraph1 %></h6>
+    <h6 class="my-2"><%= specialEvent.specialEventWriteUp.paragraph2 %></h6>
+    <h6 class="my-2"><%= specialEvent.specialEventWriteUp.paragraph3 %></h6>
+    <h6 class="my-2"><b><%= specialEvent.specialEventWriteUp.paragraph4 %></b></h6>
+    <h6 class="my-2"><%= specialEvent.specialEventWriteUp.paragraph5 %></h6>
+</div>
 <div class="row my-5 text-center d-inline">
     <h6><%= specialEvent.specialEventExplanation %></h6>
 </div>
@@ -110,11 +117,6 @@
         </button>
         <div class="collapse my-3" id="collapseExample2">
             <div class="card card-body text-dark text-left">
-                <h6 class="my-2"><%= specialEvent.specialEventWriteUp.paragraph1 %></h6>
-                <h6 class="my-2"><%= specialEvent.specialEventWriteUp.paragraph2 %></h6>
-                <h6 class="my-2"><%= specialEvent.specialEventWriteUp.paragraph3 %></h6>
-                <h6 class="my-2"><b><%= specialEvent.specialEventWriteUp.paragraph4 %></b></h6>
-                <h6 class="my-2"><%= specialEvent.specialEventWriteUp.paragraph5 %></h6>
                 <%- include('parking-info', {}); %>
             </div>
         </div>

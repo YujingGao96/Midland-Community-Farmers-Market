@@ -1,6 +1,12 @@
 <div class="row my-5 text-center d-inline">
     <h4>Upcoming Weekly Market Date: <%= weeklyMarket.weeklyMarketDate %></h4>
 </div>
+<div class="row my-5 text-left d-inline">
+    <h6 class="my-2"><%= weeklyMarket.weeklyMarketWriteUp.paragraph1 %></h6>
+    <h6 class="my-2"><%= weeklyMarket.weeklyMarketWriteUp.paragraph2 %></h6>
+    <h6 class="my-2"><%= weeklyMarket.weeklyMarketWriteUp.paragraph3 %></h6>
+    <h6 class="my-2"><%= weeklyMarket.weeklyMarketWriteUp.paragraph4 %></h6>
+</div>
 <div class="row my-5 text-center d-inline">
     <h6><%= weeklyMarket.weeklyMarketExplanation %></h6>
 </div>
@@ -102,10 +108,6 @@
         </button>
         <div class="collapse my-3" id="collapseExample">
             <div class="card card-body text-dark text-left">
-                <h6 class="my-2"><%= weeklyMarket.weeklyMarketWriteUp.paragraph1 %></h6>
-                <h6 class="my-2"><%= weeklyMarket.weeklyMarketWriteUp.paragraph2 %></h6>
-                <h6 class="my-2"><%= weeklyMarket.weeklyMarketWriteUp.paragraph3 %></h6>
-                <h6 class="my-2"><%= weeklyMarket.weeklyMarketWriteUp.paragraph4 %></h6>
                 <%- include('parking-info', {}); %>
             </div>
         </div>
