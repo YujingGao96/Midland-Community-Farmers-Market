@@ -1,8 +1,8 @@
 <div class="row my-5 text-center d-inline">
-    <h4>Upcoming <%= specialEvent.specialEventTitle%> Date: <%= specialEvent.specialEventDate%></h4>
+    <h4>Upcoming <%= specialEvent.specialEventTitle %> Date: <%= specialEvent.specialEventDate %></h4>
 </div>
 <div class="row my-5 text-center d-inline">
-    <h6><%= specialEvent.specialEventExplanation%></h6>
+    <h6><%= specialEvent.specialEventExplanation %></h6>
 </div>
 <div class="row">
     <div class="col-lg-4 col-md-12">
@@ -18,8 +18,8 @@
     </div>
     <div class="col-12 my-auto px-4 pt-4">
         <form method="post" action="/">
-            <input type="hidden" id="eventType" name="eventType" value= "SE">
-            <input type="hidden" id="eventDate" name="eventDate" value=<%= specialEvent.specialEventDate%>>
+            <input type="hidden" id="eventType" name="eventType" value="SE">
+            <input type="hidden" id="eventDate" name="eventDate" value=<%= specialEvent.specialEventDate %>>
             <div class="form-row">
                 <div class="form-group col-6">
                     <label for="inputFirstName" class="text-white">First name</label>
@@ -53,15 +53,15 @@
             <div class="form-group">
                 <label for="inputSpot" class="text-white">Choose a space</label>
                 <select id="inputSpot" class="form-control" name="spot">
-                    <% for (var i = 0 ; i < specialEvent.spaces[0].length; i++) {%>
+                    <% for (var i = 0 ; i < specialEvent.spaces[0].length; i++) { %>
                         <option> <%= specialEvent.spaces[0][i].SPACE_ID %></option>
-                    <%}%>
+                    <% } %>
 
                 </select>
             </div>
 
             <button type="button" class="btn btn-secondary btn-xl mt-3 col-12" data-toggle="modal"
-                    data-target="#termOfService-specialEvent" id="reserve-button-2">Agree & Reserve
+                    data-target="#termOfService-specialEvent" id="reserve-button-2">Reserve & Pay
             </button>
 
             <p class="my-3 col-12" id="agreement-message-2"><i class="far fa-check-circle"></i>&nbsp;&nbsp;You've
@@ -81,8 +81,11 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <p class="text-dark">
-                                <%- reservation.termOfServices %>
+                            <p class="text-dark text-left">
+                                <%- reservation.termOfServices.paragraph1 %>
+                            </p>
+                            <p class="text-dark text-left">
+                                <%- reservation.termOfServices.paragraph2 %>
                             </p>
                         </div>
                         <div class="modal-footer">
@@ -103,7 +106,7 @@
         <button class="btn btn-dark" type="button" data-toggle="collapse"
                 data-target="#collapseExample2" aria-expanded="false"
                 aria-controls="collapseExample2">
-            <i class="fas fa-chevron-circle-down"></i>&nbsp;&nbsp;Show parking/space information
+            <i class="fas fa-chevron-circle-down"></i>&nbsp;&nbsp;Show parking information
         </button>
         <div class="collapse my-3" id="collapseExample2">
             <div class="card card-body text-dark text-left">

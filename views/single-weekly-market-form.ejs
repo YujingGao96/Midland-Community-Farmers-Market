@@ -52,7 +52,7 @@
                 </select>
             </div>
             <button type="button" class="btn btn-secondary btn-xl mt-3 col-8" data-toggle="modal"
-                    data-target="#exampleModalLong" id="reserve-button">Agree & Reserve
+                    data-target="#exampleModalLong" id="reserve-button">Reserve & Pay
             </button>
 
             <p class="my-3 col-12" id="agreement-message"><i class="far fa-check-circle"></i>&nbsp;&nbsp;You've
@@ -74,8 +74,11 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <p class="text-dark">
-                                <%- reservation.termOfServices %>
+                            <p class="text-dark text-left">
+                                <%- reservation.termOfServices.paragraph1 %>
+                            </p>
+                            <p class="text-dark text-left">
+                                <%- reservation.termOfServices.paragraph2 %>
                             </p>
                         </div>
                         <div class="modal-footer">
@@ -95,13 +98,14 @@
     <div class="col-lg-12 my-5">
         <button class="btn btn-dark" type="button" data-toggle="collapse"
                 data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-            <i class="fas fa-chevron-circle-down"></i>&nbsp;&nbsp;Show parking/space information
+            <i class="fas fa-chevron-circle-down"></i>&nbsp;&nbsp;Show parking information
         </button>
         <div class="collapse my-3" id="collapseExample">
             <div class="card card-body text-dark text-left">
                 <h6 class="my-2"><%= weeklyMarket.weeklyMarketWriteUp.paragraph1 %></h6>
                 <h6 class="my-2"><%= weeklyMarket.weeklyMarketWriteUp.paragraph2 %></h6>
                 <h6 class="my-2"><%= weeklyMarket.weeklyMarketWriteUp.paragraph3 %></h6>
+                <h6 class="my-2"><%= weeklyMarket.weeklyMarketWriteUp.paragraph4 %></h6>
                 <%- include('parking-info', {}); %>
             </div>
         </div>

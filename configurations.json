@@ -128,9 +128,10 @@
     "weeklyMarketDate": "05-02-2020",
     "weeklyMarketExplanation": "Reservation can be made beginning at 8:00 PM on the Monday before the market, until 8:00 PM on the Thursday before Saturday's market.",
     "weeklyMarketWriteUp": {
-      "paragraph1": "Our main market filed has 74 spaces. The Market Manager can be found in Space #1. Spaces 2-33 may be reserved for the following Saturday's market. Spaces 23-34 have LIMITED electrical capacity. Simply make your selection from the list of available spaces, and you can pay via credit card or PayPal. These reservations will be held until 8:30 on Saturday morning. After that time, your space may not be available, but your donation may be credited for the use of any other space. Space fee donations are NON-REFUNDABLE. Your $10 fee is a donation to the MUMC Men's Club, which distributes the collected fees to deserving local charities.",
-      "paragraph2": "Spaces which were not reserved, and all other spaces, also cost $10 (although we'll happily accept larger donations.) Just show up, pick out a spot, and set up. Payment for these spaces (CASH ONLY) maybe be made on the morning of the market; see the market manager in Space #1.",
-      "paragraph3": "Spaces 64 and 71-74 are for overflow use only, after all other spaces are filled. Spaces 67T - 70T are half-size spaces which accommodate tables only, no canopies. See below for parking information."
+      "paragraph1": "For regular weekly markets, only the 74 spaces on the main market field will be used. Space #1 is reserved for the Market Manager, and the spaces marked in red will be used only for overflow after all other spaces have been taken. Of the remaining spaces, the ones marked in white (spaces 2-33) may be RESERVED, beginning at 8:00 pm on the Monday preceding the market until 8:00 pm on Thursday. Simply make your selection from the list of available spaces, and pay online via credit card or PayPal. The remainder of the spaces are OPEN TO ANYONE on a first-come first-pick basis; see the market manager to pay (cash only, please.)",
+      "paragraph2": "Spaces not occupied a half hour prior to opening will become available to anyone, although if you have paid a reservation fee, your fee can be credited for another space on the SAME DAY.",
+      "paragraph3": "When making your selection, please note that spaces 67T - 70T are TABLE ONLY spaces which are too small to accommodate a canopy.  Spaces 23-44 have LIMITED electrical capacity.",
+      "paragraph4": "Spaces reservation fees are NON-REFUNDABLE. Your fee is a donation to the MUMC Men's Club, which distributes the collected funds to deserving local charities."
     }
   },
   "specialEvent": {
@@ -140,11 +141,11 @@
     "specialEventDate": "06-20-2020",
     "specialEventExplanation": "Reservation can be made beginning six weeks before the event, until the Tuesday before the market.",
     "specialEventWriteUp": {
-      "paragraph1": "Our main market filed has 74 spaces. Space 23-34 have LIMITED electrical capacity. There are an additional 11 spaces by the fountain across the street, and 17 more in the front of the Fellowship Hall. The Market Manager can be found in Space #1. For special market events, ALL SPACES ARE BY RESERVATION ONLY, and may be reserved beginning six weeks before the event, with reservations closing on the Thursday prior to the event. Simply make your selection from the list of available spaces, and you can pay via credit card or PayPal.",
-      "paragraph2": "When making your selection, please note that spaces 67T - 70T on the main filed and spaces FH 14T - FH 17T in front of the Fellowship Hall are TABLE ONLY spaces, which can accommodate TABLES ONLY, and do NOT have room for a canopy.",
-      "paragraph3": "Please see below for parking information.",
+      "paragraph1": "For special markets (the Spring Fling Craft Market, Fall Festival, and Christmas Craft Fair) there will be 74 spaces available on the main market field, another 11 spaces by the fountain across the street, and 17 more in the front of the church's Fellowship Hall. For special markets, ALL SPACES in all three areas are available BY RESERVATION ONLY. Simply make your selection from the list of available spaces, and pay online via credit card or PayPal.",
+      "paragraph2": "Spaces not occupied a half hour prior to opening will become available to anyone, although if you have paid a reservation fee, your fee can be credited for another space on the SAME DAY.",
+      "paragraph3": "When making your selection, please note that spaces 67T - 70T on the main field and spaces FH 14T - FH 17T in front of the Fellowship Hall are TABLE ONLY spaces which are too small to accomodate a canopy.  Spaces 23-44 have LIMITED electrical capacity. Space #1 is reserved for the Market Manager.",
       "paragraph4": "DO NOT DRIVE STAKES at the Fountain or Fellowship Hall spaces. Vendors who violate this rule will be expected to reimburse the church for any resulting damages to the sprinkler system.",
-      "paragraph5": "Spaces fee donations are NON-REFUNDABLE. Your fee is a donation to the MUMC Men's Club, which distributes the collected fees to deserving local charities."
+      "paragraph5": "Spaces reservation fees are NON-REFUNDABLE. Your fee is a donation to the MUMC Men's Club, which distributes the collected funds to deserving local charities."
     },
     "specialEventBanner": {
       "infoSection1": "As always, the weekly market season will open on the first Saturday in May. But for those who just can't wait, in March we'll repeat last year's very popular pre-season event: the second annual",
@@ -162,8 +163,11 @@
     "paragraph2": "Please DO NOT park on the grassy road sides alongside the market field; doing so blocks the view of the market, and creates a safety hazard for visitors walking onto the field."
   },
   "reservation": {
-    "termOfServices": "IN RESERVING A SPACE, I AGREE TO HOLD MIDLAND UNITED METHODIST CHURCH AND THE MIDLAND COMMUNITY FARMERS MARKET HARMLESS FROM ALL CLAIMS OR SUITS FOR ALL LOSSES, LIABILITIES, INJURIES, OR OTHER DETRIMENTS WHICH MAY BE MADE AGAINST MIDLAND UNITED METHODIST CHURCH OR THE MIDLAND COMMUNITY FARMERS MARKET BASED ON ANY INTENTIONAL OR NEGLIGENT ACT OR OMISSION BY THE VENDOR OR A CUSTOMER AS A RESULT OF PARTICIPATION IN THE MIDLAND COMMUNITY FARMERS MARKETS.",
+    "termOfServices": {
+      "paragraph1": "I confirm that the items I will be selling are in compliance with the restrictions listed in the \"Be a Vendor\" section of this website.",
+      "paragraph2": "IN RESERVING A SPACE, I AGREE TO HOLD MIDLAND UNITED METHODIST CHURCH AND THE MIDLAND COMMUNITY FARMERS MARKET HARMLESS FROM ALL CLAIMS OR SUITS FOR ALL LOSSES, LIABILITIES, INJURIES, OR OTHER DETRIMENTS WHICH MAY BE MADE AGAINST MIDLAND UNITED METHODIST CHURCH OR THE MIDLAND COMMUNITY FARMERS MARKET BASED ON ANY INTENTIONAL OR NEGLIGENT ACT OR OMISSION BY THE VENDOR OR A CUSTOMER AS A RESULT OF PARTICIPATION IN THE MIDLAND COMMUNITY FARMERS MARKETS."
+    },
     "title": "Vendor Reservation"
- },
+  },
   "footerText": "Copyright &copy; 2020 - Midland Community Farmers Market"
 }
