@@ -10,11 +10,11 @@
                         <p class="text-dark text-left my-auto align-middle" style="text-align: justify !important;">
                             <%- about.body.starting %>
                             <% for (var i = 0; i < about.body.charitiesAndLink.length - 1;  i++ ) { %>
-                                <a class="about-us-links"
+                                <a class="about-us-links" target="_blank"
                                    href="<%= about.body.charitiesAndLink[i].charityLink %>"> <%= about.body.charitiesAndLink[i].charityName %></a><%= about.body.charitiesAndLink[i].additionText %>,
                             <% } %>
                             <!-- Print out the last charity-->
-                            and <a class="about-us-links"
+                            and <a class="about-us-links" target="_blank"
                                    href="<%= about.body.charitiesAndLink[about.body.charitiesAndLink.length - 1].charityLink %>"> <%= about.body.charitiesAndLink[about.body.charitiesAndLink.length - 1].charityName %></a><%= about.body.charitiesAndLink[i].additionText %><%= about.body.ending %>
                         </p>
                     </div>
