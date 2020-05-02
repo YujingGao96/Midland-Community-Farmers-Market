@@ -1,4 +1,15 @@
-<section class="page-section" id="special-event">
+<% var pic = '';%>
+<% if (specialEvent.specialEventTitle === 'Spring Fling') { %>
+    <% pic = 'img/event Spring Fling washed.jpg'%>
+<% } %>
+<% if (specialEvent.specialEventTitle === 'Fall Festival') { %>
+    <% pic = 'img/event Fall Festival washed.jpg'%>
+<% } %>
+<% if (specialEvent.specialEventTitle === 'Christmas Craft Fair') { %>
+    <% pic = 'img/event Christmas washed.jpg'%>
+<% } %>
+
+<section class="page-section" id="special-event" style="background-image: url('<%= pic%>')">
     <div class="container">
         <h1 class="text-center mt-0 text-success"><%= specialEvent.specialEventTitle %></h1>
         <hr class="divider my-4 light">
