@@ -3,7 +3,7 @@
   "homeHeader": "Midland Community Farmers Market",
   "homeDate": "Every Saturday (May through October) from 9:00 am until noon.",
   "about": {
-    "title": "Who Are We?",
+    "title": "Who Are We",
     "body": {
       "starting": "The Midland Community Farmers Market</b> is operated as a non-profit function of the Mens' Club of <a class=\"about-us-links\" href=\"http://www.midlandumc.com/\">Midland United Methodist Church</a>, and is offered as a service to the people of the Midland area of Georgia's Muscogee and Harris Counties. All vendor fees go to support the club's local outreach ministries, including ",
       "charitiesAndLink": [
@@ -162,7 +162,8 @@
     "paragraph2": "Please DO NOT park on the grassy road sides alongside the market field; doing so blocks the view of the market, and creates a safety hazard for visitors walking onto the field."
   },
   "reservation": {
-    "termOfServices": "IN RESERVING A SPACE, I AGREE TO HOLD MIDLAND UNITED METHODIST CHURCH AND THE MIDLAND COMMUNITY FARMERS MARKET HARMLESS FROM ALL CLAIMS OR SUITS FOR ALL LOSSES, LIABILITIES, INJURIES, OR OTHER DETRIMENTS WHICH MAY BE MADE AGAINST MIDLAND UNITED METHODIST CHURCH OR THE MIDLAND COMMUNITY FARMERS MARKET BASED ON ANY INTENTIONAL OR NEGLIGENT ACT OR OMISSION BY THE VENDOR OR A CUSTOMER AS A RESULT OF PARTICIPATION IN THE MIDLAND COMMUNITY FARMERS MARKETS."
-  },
+    "termOfServices": "IN RESERVING A SPACE, I AGREE TO HOLD MIDLAND UNITED METHODIST CHURCH AND THE MIDLAND COMMUNITY FARMERS MARKET HARMLESS FROM ALL CLAIMS OR SUITS FOR ALL LOSSES, LIABILITIES, INJURIES, OR OTHER DETRIMENTS WHICH MAY BE MADE AGAINST MIDLAND UNITED METHODIST CHURCH OR THE MIDLAND COMMUNITY FARMERS MARKET BASED ON ANY INTENTIONAL OR NEGLIGENT ACT OR OMISSION BY THE VENDOR OR A CUSTOMER AS A RESULT OF PARTICIPATION IN THE MIDLAND COMMUNITY FARMERS MARKETS.",
+    "title": "Vendor Reservation"
+ },
   "footerText": "Copyright &copy; 2020 - Midland Community Farmers Market"
 }
