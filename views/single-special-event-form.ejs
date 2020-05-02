@@ -1,12 +1,14 @@
 <div class="row my-5 text-center d-inline">
     <h4>Upcoming <%= specialEvent.specialEventTitle %> Date: <%= specialEvent.specialEventDate %></h4>
 </div>
-<div class="row my-5 text-left d-inline">
-    <h6 class="my-2"><%= specialEvent.specialEventWriteUp.paragraph1 %></h6>
-    <h6 class="my-2"><%= specialEvent.specialEventWriteUp.paragraph2 %></h6>
-    <h6 class="my-2"><%= specialEvent.specialEventWriteUp.paragraph3 %></h6>
-    <h6 class="my-2"><b><%= specialEvent.specialEventWriteUp.paragraph4 %></b></h6>
-    <h6 class="my-2"><%= specialEvent.specialEventWriteUp.paragraph5 %></h6>
+<div class="row my-5 text-left d-inline text-dark">
+    <div class="card card-body">
+        <h6 class="my-2"><%= specialEvent.specialEventWriteUp.paragraph1 %></h6>
+        <h6 class="my-2"><%= specialEvent.specialEventWriteUp.paragraph2 %></h6>
+        <h6 class="my-2"><%= specialEvent.specialEventWriteUp.paragraph3 %></h6>
+        <h6 class="my-2"><b><%= specialEvent.specialEventWriteUp.paragraph4 %></b></h6>
+        <h6 class="my-2"><%= specialEvent.specialEventWriteUp.paragraph5 %></h6>
+    </div>
 </div>
 <div class="row my-5 text-center d-inline">
     <h6><%= specialEvent.specialEventExplanation %></h6>
