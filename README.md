@@ -1,3 +1,2 @@
 # Midland-Farmers-Market
-this is the test build
-
+this is a private repository

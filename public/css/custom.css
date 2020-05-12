@@ -1,18 +1,21 @@
-a {
+a, a:hover{
     color: #00650A;
 }
 
-#googleMapFrame, .map-rounded{
-    border-radius: 8px;
+img {
+    image-orientation: from-image;
+    max-width:1200px;
+    max-height:937px;
+    width: 100%;
+    height: 100%;
+}
+
+#googleMapFrame{
+    border-radius: 30px;
 }
 
 .rounded-corner {
-    border-radius: 15px;
-}
-
-.about-us-links, .about-us-links:hover {
-    color: black;
-    font-style: italic;
+    border-radius: 30px;
 }
 
 .nav-logo {
@@ -90,28 +93,65 @@ hr.light {
         color: #00650A;
     }
     #mainNav .navbar-brand:hover {
-        color: #00650A;
+        color: #00650A !important;
     }
 }
 
-header.masthead {
-    background: #fff153 ;
+#home-page, #be-a-vendor {
+    background: #4fc1c2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #eef557, #4fc1c2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #eef557, #4fc1c2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+#contact, #what-is-available {
+    background: #4fc1c2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #eef557, #4fc1c2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #eef557, #4fc1c2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 
 .text-success{
     color: #00650A !important;
 }
 
 .home-logo{
-    background: url("../img/amber-logo-b-min.png");
+    background: url("../img/home-logo.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-   
+    animation-name: slide-in;
+    animation-duration: 2s;
+}
+
+@keyframes slide-in {
+  0%   {background-position:left;}
+  100% {background-position:center;}
+}
+
+#announcement {
+    background: #4fc1c2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #eef557, #4fc1c2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #eef557, #4fc1c2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #4800ff;
+}
+
+#announcement h4 {
+    line-height: inherit;
 }
 
 
+#reservation {
+    color:#4800ff;
+    background-color: #fff153;
+}
+
 .set-height {
     height: 350px !important; 
+}
+
+#wrapper {
+    overflow-x: hidden;
+}
+
+#parking h6 {
+    line-height: inherit;
 }

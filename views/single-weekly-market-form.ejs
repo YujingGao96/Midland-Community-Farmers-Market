@@ -1,37 +1,37 @@
 <div class="row my-5 text-center d-inline">
-    <h4>Upcoming Weekly Market Date: <%= weeklyMarket.weeklyMarketDate %></h4>
+    <h4>Upcoming Weekly Market Date: <%- weeklyMarket.weeklyMarketDate %></h4>
 </div>
 
 <div class="row my-5 text-left d-inline text-dark">
     <div class="card card-body">
-        <h6 class="my-2"><%= weeklyMarket.weeklyMarketWriteUp.paragraph1 %></h6>
-        <h6 class="my-2"><%= weeklyMarket.weeklyMarketWriteUp.paragraph2 %></h6>
-        <h6 class="my-2"><%= weeklyMarket.weeklyMarketWriteUp.paragraph3 %></h6>
-        <h6 class="my-2"><%= weeklyMarket.weeklyMarketWriteUp.paragraph4 %></h6>
+        <h6 class="my-2"><%- weeklyMarket.weeklyMarketWriteUp.paragraph1 %></h6>
+        <h6 class="my-2"><%- weeklyMarket.weeklyMarketWriteUp.paragraph2 %></h6>
+        <h6 class="my-2"><%- weeklyMarket.weeklyMarketWriteUp.paragraph3 %></h6>
+        <h6 class="my-2"><%- weeklyMarket.weeklyMarketWriteUp.paragraph4 %></h6>
     </div>
 </div>
 <div class="row my-5 text-center d-inline">
-    <h6><%= weeklyMarket.weeklyMarketExplanation %></h6>
+    <h6><%- weeklyMarket.weeklyMarketExplanation %></h6>
 </div>
 <div class="row">
     <div class="col-lg-6">
-        <img class="img-fluid map-rounded" src="img/market-spaces/Spaces - Main Field.jpg"
+        <img class="img-fluid map-rounded" src="img/market-spaces/spaces banner 24x24.jpg"
              alt="Main Field">
     </div>
     <div class="col-lg-6 my-auto px-4 pt-4">
         <form method="post" action="/">
             <input type="hidden" id="eventType" name="eventType" value="WM">
-            <input type="hidden" id="eventDate" name="eventDate" value=<%= weeklyMarket.weeklyMarketDate %>>
+            <input type="hidden" id="eventDate" name="eventDate" value=<%- weeklyMarket.weeklyMarketDate %>>
             <div class="form-row">
                 <div class="form-group col-6">
-                    <label for="inputFirstName" class="text-white">First name</label>
+                    <label for="inputFirstName">First name</label>
                     <input type="text" class="form-control" id="inputFirstName" name="firstName"
                            maxlength="25" pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$"
                            title="Please enter a legal first name."
                            required>
                 </div>
                 <div class="form-group col-6">
-                    <label for="inputLastName" class="text-white">Last name</label>
+                    <label for="inputLastName">Last name</label>
                     <input type="text" class="form-control" id="inputLastName" name="lastName"
                            pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$" title="Please enter a legal last name."
                            maxlength="25"
@@ -39,27 +39,27 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="inputSell" class="text-white">Items being sold - NO FRANCHISE SALES</label>
+                <label for="inputSell">Items being sold - NO FRANCHISE SALES</label>
                 <input type="text" class="form-control" id="inputSell" name="selling" maxlength="20"
                        pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$" title="Cannot contain invalid characters."
                        required>
             </div>
             <div class="form-row">
                 <div class="form-group col-5">
-                    <label for="inputPhone" class="text-white">Phone number</label>
+                    <label for="inputPhone">Phone number</label>
                     <input type="tel" class="form-control" id="inputPhone" name="phone" maxlength="14"
                            required>
                 </div>
                 <div class="form-group col-7">
-                    <label for="inputEmail" class="text-white">Email address</label>
+                    <label for="inputEmail">Email address</label>
                     <input type="email" class="form-control" id="inputEmail" name="email" required>
                 </div>
             </div>
             <div class="form-group">
-                <label for="inputSpot" class="text-white">Choose a space</label>
+                <label for="inputSpot">Choose a space</label>
                 <select id="inputSpot" class="form-control" name="spot">
                     <% for (var i = 0 ; i < weeklyMarket.spaces[0].length; i++) { %>
-                        <option> <%= weeklyMarket.spaces[0][i].SPACE_ID %></option>
+                        <option> <%- weeklyMarket.spaces[0][i].SPACE_ID %></option>
                     <% } %>
                 </select>
             </div>
@@ -108,14 +108,12 @@
 </div>
 <div class="row">
     <div class="col-lg-12 my-5">
-        <button class="btn btn-dark" type="button" data-toggle="collapse"
+        <button class="btn btn-link" type="button" data-toggle="collapse"
                 data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
             <i class="fas fa-chevron-circle-down"></i>&nbsp;&nbsp;Show parking information
         </button>
         <div class="collapse my-3" id="collapseExample">
-            <div class="card card-body text-dark text-left">
-                <%- include('parking-info', {}); %>
-            </div>
+            <%- include('parking-info', {}); %>
         </div>
     </div>
 </div>

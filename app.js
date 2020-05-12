@@ -17,8 +17,8 @@ app.use(express.urlencoded({extended: true}));
 //setting PayPal information
 paypal.configure({
     'mode': 'sandbox', //sandbox or live
-    'client_id': 'AYscelyFVeqO7lxrqpBaVv-7y9nZPWyN98a-wv-8bUObZAlipfk7QCwmV54JsJDxo26Bxsh4FirUzTof',
-    'client_secret': 'EL9UFVbvXyKFowaUPrO7ZPVYbBXk7NBC3XFZvsgZIXQ_B5taISxH4bj2KLDd5Loy5f6xsSmQyqHD7KAx'
+    'client_id': '@@@@',
+    'client_secret': '@@@@'
 });
 
 

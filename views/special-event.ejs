@@ -1,28 +1,17 @@
-<% var pic = '';%>
-<% if (specialEvent.specialEventTitle === 'Spring Fling') { %>
-    <% pic = 'img/event Spring Fling washed.jpg'%>
-<% } %>
-<% if (specialEvent.specialEventTitle === 'Fall Festival') { %>
-    <% pic = 'img/event Fall Festival washed.jpg'%>
-<% } %>
-<% if (specialEvent.specialEventTitle === 'Christmas Craft Fair') { %>
-    <% pic = 'img/event Christmas washed.jpg'%>
-<% } %>
-
-<section class="page-section" id="special-event" style="background-image: url('<%= pic%>')">
+<section class="py-5" id="special-event" style="background-image: url('img/event Spring Fling washed.jpg')">
     <div class="container">
-        <h1 class="text-center mt-0 text-success"><%= specialEvent.specialEventTitle %></h1>
+        <h1 class="text-center mt-0 text-success"><%- specialEvent.specialEventTitle %></h1>
         <hr class="divider my-4 light">
         <h5 class="text-success text-center m-4">
-            <%= specialEvent.specialEventBanner.infoSection1 %>
+            <%- specialEvent.specialEventBanner.infoSection1 %>
         </h5>
-        <h3 class="text-success text-center m-4"><%= specialEvent.specialEventBanner.bold1 %></h3>
-        <h5 class="text-success text-center m-4"><%= specialEvent.specialEventBanner.infoSection2 %></h5>
-        <h3 class="text-success text-center m-4"><%= specialEvent.specialEventBanner.bold2 %></h3>
-        <h5 class="text-success text-center m-4"><%= specialEvent.specialEventBanner.infoSection3 %></h5>
-        <h6 class="text-success text-center m-4"><%= specialEvent.specialEventBanner.comment %></h6>
-        <h5 class="text-success text-center m-4"><%= specialEvent.specialEventBanner.whenIsIt %></h5>
-        <h5 class="text-success text-center m-4"><%= specialEvent.specialEventBanner.closing %></h5>
+        <h3 class="text-success text-center m-4"><%- specialEvent.specialEventBanner.bold1 %></h3>
+        <h5 class="text-success text-center m-4"><%- specialEvent.specialEventBanner.infoSection2 %></h5>
+        <h3 class="text-success text-center m-4"><%- specialEvent.specialEventBanner.bold2 %></h3>
+        <h5 class="text-success text-center m-4"><%- specialEvent.specialEventBanner.infoSection3 %></h5>
+        <h6 class="text-success text-center m-4"><%- specialEvent.specialEventBanner.comment %></h6>
+        <h5 class="text-success text-center m-4"><%- specialEvent.specialEventBanner.whenIsIt %></h5>
+        <h5 class="text-success text-center m-4"><%- specialEvent.specialEventBanner.closing %></h5>
 
     </div>
 </section>

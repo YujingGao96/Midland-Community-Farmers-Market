@@ -1,6 +1,16 @@
-<div class="card card-body text-dark text-left">
-    <img class="my-2 card-img" src="img/market-spaces/Parking.jpg">
-    <h6 class="my-2"><%= parking.paragraph1 %></h6>
-    <h6 class="my-2"><%= parking.paragraph2 %></h6>
-
+<div class="row mx-3">
+	<div class="card card-body col-12 text-dark text-left rounded-corner" id="parking">
+		<div class="row d-inline-block m-auto text-center">
+			<h3 class="my-3"><i class="fas fa-parking"></i>&nbsp;&nbsp;Parking Information</h3>
+		</div>
+		<div class="row">
+			<div class="col-lg-7 col-md-12 d-inline-block m-auto rounded-corner">
+				<img class="my-2 img-fluid rounded-corner" src="img/market-spaces/Parking.jpg">
+            </div>
+			<div class="col-lg-5 col-md-12 d-inline-block m-auto">
+				<h6 class="my-2"><%- parking.paragraph1 %></h6>
+				<h6 class="my-2"><%- parking.paragraph2 %></h6>
+			</div>
+		</div>
+	</div>
 </div>

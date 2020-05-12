@@ -1,37 +1,37 @@
 <!-- About Section -->
-<section class="page-section bg-primary" id="about">
+<section class="py-5 bg-primary" id="about">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-12 text-center">
-                <h1 class="text-success mt-0"><%= about.title%></h1>
-                <hr class="divider light my-4">
+                <h1 class="text-dark mt-0"><%- about.title%></h1>
+                <hr class="divider my-4">
                 <div class="row align-content-center">
                     <div class="col-md-6 d-inline-block m-auto">
                         <p class="text-dark text-left my-auto align-middle" style="text-align: justify !important;">
                             <%- about.body.starting %>
                             <% for (var i = 0; i < about.body.charitiesAndLink.length - 1;  i++ ) { %>
                                 <a class="about-us-links" target="_blank"
-                                   href="<%= about.body.charitiesAndLink[i].charityLink %>"> <%= about.body.charitiesAndLink[i].charityName %></a><%= about.body.charitiesAndLink[i].additionText %>,
+                                   href="<%- about.body.charitiesAndLink[i].charityLink %>"> <%- about.body.charitiesAndLink[i].charityName %></a><%- about.body.charitiesAndLink[i].additionText %>,
                             <% } %>
                             <!-- Print out the last charity-->
                             and <a class="about-us-links" target="_blank"
-                                   href="<%= about.body.charitiesAndLink[about.body.charitiesAndLink.length - 1].charityLink %>"> <%= about.body.charitiesAndLink[about.body.charitiesAndLink.length - 1].charityName %></a><%= about.body.charitiesAndLink[i].additionText %><%= about.body.ending %>
+                                   href="<%- about.body.charitiesAndLink[about.body.charitiesAndLink.length - 1].charityLink %>"> <%- about.body.charitiesAndLink[about.body.charitiesAndLink.length - 1].charityName %></a><%- about.body.charitiesAndLink[i].additionText %><%- about.body.ending %>
                         </p>
                     </div>
                     <div class="col-md-6">
                         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img class="d-block w-100 rounded-corner" src="img/who are we 1.jpg" alt="First slide">
+                                    <img class="d-block rounded-corner" src="img/who are we 1.jpg" alt="First slide">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 rounded-corner" src="img/who are we 2.jpg" alt="Second slide">
+                                    <img class="d-block rounded-corner" src="img/who are we 2.jpg" alt="Second slide">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 rounded-corner" src="img/who are we 3.JPG" alt="Third slide">
+                                    <img class="d-block rounded-corner" src="img/who are we 3.JPG" alt="Third slide">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 rounded-corner" src="img/who are we 4.jpg" alt="Fourth slide">
+                                    <img class="d-block rounded-corner" src="img/who are we 4.jpg" alt="Fourth slide">
                                 </div>
                             </div>
                         </div>

@@ -10,22 +10,25 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto my-2 my-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#about"><%= about.title%></a>
+                    <a class="nav-link js-scroll-trigger" href="#about"><%- about.title%></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#what-is-available"><%= whatsAvailable.whatsAvailableTitle%></a>
+                    <a class="nav-link js-scroll-trigger" href="#what-is-available"><%- whatsAvailable.whatsAvailableTitle%></a>
                 </li>
+                <% if (announcement.switch === "ON") { %>
+                    <%- include('announcement-nav', {}); %>
+                <% } %>
                 <% if (specialEvent.specialEventSwitch === "ON") { %>
                     <%- include('special-event-nav', {}); %>
                 <% } %>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#be-a-vendor"><%= beAVendor.beAVendorTitle%></a>
+                    <a class="nav-link js-scroll-trigger" href="#be-a-vendor"><%- beAVendor.beAVendorTitle%></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#reservation"><%= reservation.title%>n</a>
+                    <a class="nav-link js-scroll-trigger" href="#reservation"><%- reservation.title%></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#contact"><%= contact.contactTitle%></a>
+                    <a class="nav-link js-scroll-trigger" href="#contact"><%- contact.contactTitle%></a>
                 </li>
             </ul>
         </div>

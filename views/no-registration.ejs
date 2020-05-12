@@ -1,5 +1,25 @@
 <div class="row my-5">
-    <h5>You can't register for any event right now. The weekly market registration opens Monday - Thursday for
-        the current week. The special event registration opens 5 weeks before and closes 1 week before the
-        event.</h5>
+	<h5 class="mx-3">
+		You can't reserve a market space right now. You can reserve a space beginning on Monday evening five days before
+		a weekly market, until Thursday evening. You can reserve a space for the next Spring Fling, Fall Festival, or
+		Christmas Craft Fair beginning five weeks before the event.
+	</h5>
+
+	<div class="row mx-3">
+		<div class="col-lg-6 my-auto">
+			<img class="img-fluid rounded-corner" src="img/market-spaces/spaces banner 24x24.jpg"
+             alt="Main Field">
+        </div>
+		<div class="col-lg-6 my-auto">
+			<div class="row my-5 text-left d-inline text-dark">
+				<div class="card card-body rounded-corner">
+					<h6 class="my-2"><%- weeklyMarket.weeklyMarketWriteUp.paragraph1 %></h6>
+					<h6 class="my-2"><%- weeklyMarket.weeklyMarketWriteUp.paragraph2 %></h6>
+					<h6 class="my-2"><%- weeklyMarket.weeklyMarketWriteUp.paragraph3 %></h6>
+					<h6 class="my-2"><%- weeklyMarket.weeklyMarketWriteUp.paragraph4 %></h6>
+				</div>
+			</div>
+		</div>
+	</div>
+    <%- include('parking-info', {}); %>
 </div>

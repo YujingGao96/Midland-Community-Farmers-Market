@@ -1,17 +1,17 @@
 <div class="row my-5 text-center d-inline">
-    <h4>Upcoming <%= specialEvent.specialEventTitle %> Date: <%= specialEvent.specialEventDate %></h4>
+    <h4>Upcoming <%- specialEvent.specialEventTitle %> Date: <%- specialEvent.specialEventDate %></h4>
 </div>
 <div class="row my-5 text-left d-inline text-dark">
     <div class="card card-body">
-        <h6 class="my-2"><%= specialEvent.specialEventWriteUp.paragraph1 %></h6>
-        <h6 class="my-2"><%= specialEvent.specialEventWriteUp.paragraph2 %></h6>
-        <h6 class="my-2"><%= specialEvent.specialEventWriteUp.paragraph3 %></h6>
-        <h6 class="my-2"><b><%= specialEvent.specialEventWriteUp.paragraph4 %></b></h6>
-        <h6 class="my-2"><%= specialEvent.specialEventWriteUp.paragraph5 %></h6>
+        <h6 class="my-2"><%- specialEvent.specialEventWriteUp.paragraph1 %></h6>
+        <h6 class="my-2"><%- specialEvent.specialEventWriteUp.paragraph2 %></h6>
+        <h6 class="my-2"><%- specialEvent.specialEventWriteUp.paragraph3 %></h6>
+        <h6 class="my-2"><b><%- specialEvent.specialEventWriteUp.paragraph4 %></b></h6>
+        <h6 class="my-2"><%- specialEvent.specialEventWriteUp.paragraph5 %></h6>
     </div>
 </div>
 <div class="row my-5 text-center d-inline">
-    <h6><%= specialEvent.specialEventExplanation %></h6>
+    <h6><%- specialEvent.specialEventExplanation %></h6>
 </div>
 <div class="row">
     <div class="col-lg-4 col-md-12">
@@ -28,43 +28,43 @@
     <div class="col-12 my-auto px-4 pt-4">
         <form method="post" action="/">
             <input type="hidden" id="eventType" name="eventType" value="SE">
-            <input type="hidden" id="eventDate" name="eventDate" value=<%= specialEvent.specialEventDate %>>
+            <input type="hidden" id="eventDate" name="eventDate" value=<%- specialEvent.specialEventDate %>>
             <div class="form-row">
                 <div class="form-group col-6">
-                    <label for="inputFirstName" class="text-white">First name</label>
+                    <label for="inputFirstName">First name</label>
                     <input type="text" class="form-control" id="inputFirstName" name="firstName"
                            maxlength="25" pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$" title="Please enter a legal first name."
                            required>
                 </div>
                 <div class="form-group col-6">
-                    <label for="inputLastName" class="text-white">Last name</label>
+                    <label for="inputLastName">Last name</label>
                     <input type="text" class="form-control" id="inputLastName" name="lastName"
                            maxlength="25" pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$" title="Please enter a legal last name."
                            required>
                 </div>
             </div>
             <div class="form-group">
-                <label for="inputSell" class="text-white">Items being sold - NO FRANCHISE SALES</label>
+                <label for="inputSell">Items being sold - NO FRANCHISE SALES</label>
                 <input type="text" class="form-control" id="inputSell" name="selling" maxlength="20"
                        pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$" title="Cannot contain invalid characters."
                        required>
             </div>
             <div class="form-row">
                 <div class="form-group col-5">
-                    <label for="inputPhone2" class="text-white">Phone number</label>
+                    <label for="inputPhone2">Phone number</label>
                     <input type="tel" class="form-control" id="inputPhone2" name="phone" maxlength="14"
                            required>
                 </div>
                 <div class="form-group col-7">
-                    <label for="inputEmail" class="text-white">Email address</label>
+                    <label for="inputEmail">Email address</label>
                     <input type="email" class="form-control" id="inputEmail" name="email" required>
                 </div>
             </div>
             <div class="form-group">
-                <label for="inputSpot" class="text-white">Choose a space</label>
+                <label for="inputSpot">Choose a space</label>
                 <select id="inputSpot" class="form-control" name="spot">
                     <% for (var i = 0 ; i < specialEvent.spaces[0].length; i++) { %>
-                        <option> <%= specialEvent.spaces[0][i].SPACE_ID %></option>
+                        <option> <%- specialEvent.spaces[0][i].SPACE_ID %></option>
                     <% } %>
 
                 </select>
@@ -113,15 +113,13 @@
 </div>
 <div class="row">
     <div class="col-lg-12 my-5">
-        <button class="btn btn-dark" type="button" data-toggle="collapse"
+        <button class="btn btn-link" type="button" data-toggle="collapse"
                 data-target="#collapseExample2" aria-expanded="false"
                 aria-controls="collapseExample2">
             <i class="fas fa-chevron-circle-down"></i>&nbsp;&nbsp;Show parking information
         </button>
         <div class="collapse my-3" id="collapseExample2">
-            <div class="card card-body text-dark text-left">
-                <%- include('parking-info', {}); %>
-            </div>
+            <%- include('parking-info', {}); %>
         </div>
     </div>
 </div>

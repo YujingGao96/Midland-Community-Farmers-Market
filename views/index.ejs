@@ -4,29 +4,33 @@
 <%- include('head', {}); %>
 
 <body id="page-top">
+    <div id="wrapper">
+        <%- include('nav', {}); %>
 
-<%- include('nav', {}); %>
+        <%- include('home-page', {}); %>
 
-<%- include('home-page', {}); %>
+        <%- include('about', {}); %>
 
-<%- include('about', {}); %>
+        <%- include('what-is-available', {}); %>
 
-<%- include('what-is-available', {}); %>
+        <% if (announcement.switch === "ON") { %>
+            <%- include('announcement', {}); %>
+        <% } %>
 
-<% if (specialEvent.specialEventSwitch === "ON") { %>
-    <%- include('special-event', {}); %>
-<% } %>
+        <% if (specialEvent.specialEventSwitch === "ON") { %>
+            <%- include('special-event', {}); %>
+        <% } %>
 
-<%- include('be-a-vendor', {}); %>
+        <%- include('be-a-vendor', {}); %>
 
-<%- include('reservation', {}); %>
+        <%- include('reservation', {}); %>
 
-<%- include('contact', {}); %>
+        <%- include('contact', {}); %>
 
-<%- include('footer', {}); %>
+        <%- include('footer', {}); %>
 
-<%- include('scripts', {}); %>
-
+        <%- include('scripts', {}); %>
+    </div>
 </body>
 
 </html>

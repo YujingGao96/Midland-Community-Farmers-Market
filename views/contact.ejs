@@ -1,13 +1,46 @@
 <!-- Contact Section -->
-<section class="page-section" id="contact">
+<section class="py-5" id="contact">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-                <h1 class="mt-0"><%= contact.contactTitle%></h1>
+            <div class="col-lg-8 text-center text-dark">
+                <h1 class="mt-0"><%- contact.contactTitle%></h1>
                 <hr class="divider my-4">
 
             </div>
         </div>
+
+        <div class="row">
+            <a class="col-lg-4 text-center mb-5 mb-lg-0" href="mailto:<%- contact.contactEmail%>">
+                <span style="color: #D44638">
+                    <i class="fas fa-envelope fa-3x mb-3"></i>
+                </span>
+                <div class="d-block"><%- contact.contactEmail%></div>
+            </a>
+
+            <a class="col-lg-4 text-center mb-5 mb-lg-0"
+               href="https://www.facebook.com/Midland-Community-Farmers-Market-584202175008593/">
+                <span style="color: #3B5998">
+                    <i class="fab fa-facebook fa-3x mb-3"></i>
+                </span>
+                <div><%- contact.facebookText%></div>
+            </a>
+
+            <a class="col-lg-4 text-center mb-5 mb-lg-0"
+               href="https://www.tripadvisor.com/Attraction_Review-g35111-d10367286-Reviews-Midland_Community_Farmers_Market-Midland_Georgia.html">
+                <span style="color: #00AF87">
+                    <i class="fab fa-tripadvisor fa-3x mb-3"></i>
+                </span>
+                <div><%- contact.tripAdvisorText%></div>
+            </a>
+
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 my-5">
+                <hr class="my-4">
+            </div>
+        </div>
+
         <div class="row">
             <div class="col-lg-6 ml-auto col-sm-12">
                 <div class="embed-responsive embed-responsive-4by3">
@@ -16,42 +49,73 @@
                 </div>
             </div>
             <div class="col-lg-6 m-auto col-sm-12 d-inline-block">
-                <h3 class="mt-4 ml-2"><%- contact.contactAddress.line1%></h3>
+                <h2 class="mt-4 ml-2"><%- contact.contactAddress.line1%></h2>
                 <h3 class="ml-2"><%- contact.contactAddress.line2%></h3>
-                <h5 class="text-muted ml-2"><%= contact.contactAddressSub%></h5>
+                <h5 class="text-muted ml-2"><%- contact.contactAddressSub%></h5>
                 <p class="text-muted ml-2">
                     <br>
-                    <b>From Columbus:</b><br>
-                    <%= contact.contactFromColumbus%><br><br>
-                    <b>From Warm Springs or Waverly Hall:</b><br>
-                    <%= contact.contactFromWarmSprings%>
+                    <b class="text-dark">From Columbus:</b><br>
+                    <%- contact.contactFromColumbus%><br><br>
+                    <b class="text-dark">From Warm Springs or Waverly Hall:</b><br>
+                    <%- contact.contactFromWarmSprings%>
                 </p>
 
             </div>
         </div>
+        
         <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 mt-5">
+            <div class="col-lg-12 col-md-12 col-sm-12 my-5">
                 <hr class="my-4">
             </div>
+        </div>
+        
+        <a class="weatherwidget-io" href="https://forecast7.com/en/32d56n84d83/31820/?unit=us" data-label_1="Midland" data-label_2="Weather" data-icons="Climacons Animated" data-theme="pure" data-basecolor="rgba(255, 255, 255, 0)" >Midland Weather</a>
+        <script>
+            !function(d,s,id)
+            {
+                var js,fjs = d.getElementsByTagName(s)[0];
+                if(!d.getElementById(id))
+                {
+                    js=d.createElement(s);
+                    js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';
+                    fjs.parentNode.insertBefore(js,fjs);
+                }
+            }
+            (document,'script','weatherwidget-io-js');
+        </script>
 
-            <a class="col-lg-4 text-center mb-5 mb-lg-0" href="mailto:<%= contact.contactEmail%>">
-                <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
-                <!-- Make sure to change the email address in anchor text AND the link below! -->
-                <div class="d-block"><%= contact.contactEmail%></div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 my-5">
+                <hr class="my-4">
+            </div>
+        </div>
+
+        <div class="row">
+            <a class="col-lg-4 text-center mb-5 mb-lg-0" href="mailto:<%- contact.contactEmail%>">
+                <span style="color: #D44638">
+                    <i class="fas fa-envelope fa-3x mb-3"></i>
+                </span>
+                <div class="d-block"><%- contact.contactEmail%></div>
             </a>
 
             <a class="col-lg-4 text-center mb-5 mb-lg-0"
                href="https://www.facebook.com/Midland-Community-Farmers-Market-584202175008593/">
-                <i class="fab fa-facebook-square fa-3x mb-3 text-muted"></i>
-                <div><%= contact.facebookText%></div>
+                <span style="color: #3B5998">
+                    <i class="fab fa-facebook fa-3x mb-3"></i>
+                </span>
+                <div><%- contact.facebookText%></div>
             </a>
 
             <a class="col-lg-4 text-center mb-5 mb-lg-0"
                href="https://www.tripadvisor.com/Attraction_Review-g35111-d10367286-Reviews-Midland_Community_Farmers_Market-Midland_Georgia.html">
-                <i class="fab fa-tripadvisor fa-3x mb-3 text-muted"></i>
-                <div><%= contact.tripAdvisorText%></div>
+                <span style="color: #00AF87">
+                    <i class="fab fa-tripadvisor fa-3x mb-3"></i>
+                </span>
+                <div><%- contact.tripAdvisorText%></div>
             </a>
 
         </div>
+
+
     </div>
 </section>
