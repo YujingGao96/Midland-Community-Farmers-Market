@@ -1,7 +1,7 @@
 {
   "name": "practice",
   "version": "1.0.0",
-  "description": "midland farmers market",
+  "description": "Midland Community Farmers Market",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/holmesdustin/Midland-Farmers-Market-.git"
+    "url": "git+https://github.com/YujingGao96/Midland-Community-Farmers-Market.git"
   },
   "author": "Team Gao",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/holmesdustin/Midland-Farmers-Market-/issues"
+    "url": "https://github.com/YujingGao96/Midland-Community-Farmers-Market/issues"
   },
-  "homepage": "https://github.com/holmesdustin/Midland-Farmers-Market-#readme",
+  "homepage": "https://github.com/YujingGao96/Midland-Community-Farmers-Market#readme",
   "dependencies": {
     "ejs": "^3.0.1",
     "express": "^4.17.1",
